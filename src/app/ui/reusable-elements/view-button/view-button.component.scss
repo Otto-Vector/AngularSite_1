@@ -1,0 +1,27 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.view_button {
+  @include size(rem(52));
+  margin: rem(20);
+  background-color: $white-color;
+  background-image: url("svg/PlayBtn.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  box-shadow: 0 rem(10) rem(50) rgba(#C9D1E7 , 60%);
+
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 rem(10) rem(30) rgba(#C9D1E7 , 80%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 rem(5) rem(15) rgba(#C9D1E7 , 100%);
+}
+}

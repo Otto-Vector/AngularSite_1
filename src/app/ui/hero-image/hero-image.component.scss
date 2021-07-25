@@ -1,0 +1,76 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.hero_image {
+  text-align: center;
+  position: relative;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //justify-items: center;
+
+  height: rem(570);
+  background-image:
+                    url("svg/HeroBg.svg"),
+                    linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+  background-size: 100%, 100%;
+  background-position: bottom center, top center;
+  background-repeat: no-repeat;
+
+  border-top: #D8E3FE 1px solid;
+
+  &__container {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: rem(92);
+    max-width: rem(600);
+    //height: rem(194);
+  }
+
+  &__header {
+    color: $mainFontColor;
+    font-family: $headerFont;
+    font-weight: 500;
+    font-size: rem(10);
+    line-height: rem(11.72);
+    letter-spacing: .1em;
+
+    padding-bottom: rem(16);
+  }
+
+  &__title {
+    color: $mainFontColor;
+    font-family: $mainFont;
+    font-weight: 300;
+    font-size: rem(48);
+    line-height: rem(60);
+    letter-spacing: .01em;
+    //white-space: nowrap;
+
+    padding-bottom: rem(28);
+
+    b {
+      font-weight: 400;
+    }
+  }
+
+  &__content {
+    color: $textFontColor;
+    font-family: $headerFont;
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: rem(28.65);
+
+
+    padding: 0 rem(40);
+  }
+
+  &__sliders {
+    position: absolute;
+
+    width: 100%;
+    text-align: center;
+    bottom: rem(20);
+  }
+}
+

@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-menu__component {
+  font-family: $mainFont;
+  color: $navFontColor;
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(12);
+  line-height: rem(15);
+  text-shadow: 0 0 5px $navShadowColor;
+  margin: 0 rem(21);
+
+  &:hover {
+    font-weight: 700;
+    color: $navActFontColor;
+  }
+}

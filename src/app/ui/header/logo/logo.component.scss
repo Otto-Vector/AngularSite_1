@@ -1,0 +1,7 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+.logo {
+  @include size(rem(26));
+  background: $navActFontColor;
+  border-radius: 50%;
+}

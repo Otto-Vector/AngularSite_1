@@ -1,0 +1,6 @@
+<button [ngClass]="[slider_button,
+         (slider.active) ? 'active' : ''
+        ]"
+        [title]="slider.title"
+        (click)="slider.action(slider.title)"
+></button>
