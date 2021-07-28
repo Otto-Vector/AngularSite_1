@@ -1,11 +1,12 @@
 @import "src/styles/variables";
+@import "src/styles/mixins";
 
 .slider_button {
   padding: 0;
   background-color: $unactiveSliderColor;
-  margin: 0 8px;
-  height: 8px;
-  width: 8px;
+  margin: 0 rem(8);
+  height: rem(8);
+  width: rem(8);
   border-radius: 50%;
   cursor: pointer;
 

@@ -1,1 +1,10 @@
-<p>customers works!</p>
+<div [class]="customers">
+  <a *ngFor="let item of customersArr"
+     [ngClass]="[
+     customers_item,
+     item.title.toLowerCase()
+     ]"
+     [href]="item.url"
+     [title]="item.title"
+  ></a>
+</div>

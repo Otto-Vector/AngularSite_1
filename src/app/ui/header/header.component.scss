@@ -10,4 +10,14 @@
   height: rem(80);
   background: $white-color;
   padding: 0 rem(117);
+
+  @media screen and (max-width: $tableWidth) {
+    padding: 0 rem(50);
+    justify-content: center;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    padding: 0 rem(40);
+  }
 }
+
+

@@ -1,7 +1,10 @@
 <div class="social">
+  <div class="icon"></div>
   <div *ngFor="let elem of social_bg"
        [title]="elem.name"
-       [ngStyle]="{'background-image' : elem.bg}"
-       class="social_elem"
+       [ngClass]="[
+        social_elem,
+        elem.name.toLowerCase()
+       ]"
   ></div>
 </div>

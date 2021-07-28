@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.customers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: $borderTopColor 1px solid;
+  height: rem(145);
+  background: $white-color;
+
+  text-align: center;
+
+  &__item {
+    //display: block;
+    @include size(rem(116),rem(30));
+    margin: 0 rem(38.25);
+    transition: .3s;
+
+    background: { //значок завёрнут в пустой svg
+      image: url("data:image/svg+xml,%3Csvg width='116' height='30' viewBox='0 0 10 9' fill='none'");
+      size: contain;
+      repeat:  no-repeat;
+      position: 50% 50%;
+    }
+
+    @media screen and (max-width: $tableWidth) {
+      margin: 0 rem(20);
+    }
+    @media screen and (max-width: $tableWidth) {
+      margin: 0 rem(10);
+    }
+
+    &.bitbucket {
+      background-image: url("svg/bitbucket.svg");
+    }
+    &.applewatch {
+      background-image: url("svg/apple-watch.svg");
+    }
+    &.facebook {
+      background-image: url("svg/facebook.svg");
+    }
+    &.atlassian {
+      background-image: url("svg/atlassian.svg");
+    }
+    &.audi {
+      background-image: url("svg/audi.svg");
+    }
+
+    &:hover { //перекрашивание в оттенок голубого
+      filter: invert(53%) sepia(89%) saturate(2325%) hue-rotate(158deg);
+      transform: translateY(-2px);
+    }
+  }
+}

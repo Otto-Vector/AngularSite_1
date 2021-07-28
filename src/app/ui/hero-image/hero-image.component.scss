@@ -4,20 +4,17 @@
 .hero_image {
   text-align: center;
   position: relative;
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: center;
-  //justify-items: center;
 
   height: rem(570);
-  background-image:
-                    url("svg/HeroBg.svg"),
-                    linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
-  background-size: 100%, 100%;
-  background-position: bottom center, top center;
-  background-repeat: no-repeat;
+  background: {
+    image:  url("svg/HeroBg.svg"),
+            linear-gradient(180deg, #F4F7FF 0%, #F1F5FF 100%);
+    size: 100%, 100%;
+    position: bottom center, top center;
+    repeat: no-repeat;
+  }
 
-  border-top: #D8E3FE 1px solid;
+  border-top: $borderTopColor 1px solid;
 
   &__container {
     text-align: center;
@@ -70,6 +67,13 @@
     width: 100%;
     text-align: center;
     bottom: rem(20);
+
+    @media screen and (max-width: $tableWidth) {
+      bottom: rem(10);
+    }
+    @media screen and (max-width: $phoneWidth) {
+      bottom: rem(5);
+    }
   }
 }
 
