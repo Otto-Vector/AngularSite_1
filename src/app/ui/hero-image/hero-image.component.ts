@@ -11,19 +11,27 @@ export class HeroImageComponent implements OnInit {
 
   btnView : ViewButton = {action: () => {console.log("ViewButton from Hero component")}}
   sliderArr: SliderButton[] = [
-    {title: "first", active: true, action: this.modeSw},
-    {title: "second", active: false, action: this.modeSw},
-    {title: "3rd", active: false, action: this.modeSw}
+    {title: "first", active: true, action: this.informator},
+    {title: "second", action: this.informator},
+    {title: "3rd", action: this.informator}
   ]
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  modeSw(tit:string) {
-    for (let [i,{title}] of this.sliderArr.entries()) {
-      this.sliderArr[i].active = (title === tit)
-    }
+  informator(s:string|undefined):void {
+    s = 'from HeroImageComponent ' + (s??'')
+    console.log(s)
   }
+  // modeSw(tit:string) {
+  //   for (let [i,{title}] of .getSliderArr.entries()) {
+  //     this.sliderArr[i].active = (title === tit)
+  //   }
+    // for (let [i,{title}] of this.sliderArr.entries()) {
+    //   this.sliderArr[i].active = (title === tit)
+    // }
+  // }
 }

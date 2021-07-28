@@ -1,6 +1,9 @@
-<button [ngClass]="[slider_button,
-         (slider.active) ? 'active' : ''
+<span class="slider_button_panel">
+  <button *ngFor="let slide of slider"
+          [ngClass]="[slider_button,
+         (slide.active) ? 'active' : ''
         ]"
-        [title]="slider.title"
-        (click)="slider.action(slider.title)"
-></button>
+          [title]="slide.title"
+          (click)="slide.action(slide.title)"
+  ></button>
+</span>
