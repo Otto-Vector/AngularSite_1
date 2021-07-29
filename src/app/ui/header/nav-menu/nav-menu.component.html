@@ -1,5 +1,6 @@
-<div class="nav-menu">
-  <a class="nav-menu__item" *ngFor="let item of navItem"
+<div [class]="navMenu">
+  <a *ngFor="let item of navItem"
+     [ngClass]="[navMenuItem]"
      [href]="item.href"
   >{{item.content}}</a>
 </div>

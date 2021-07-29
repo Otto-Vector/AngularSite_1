@@ -19,7 +19,7 @@ export class CustomersComponent implements OnInit {
     title : 'Bitbucket',
     url: '#bitbucket'
   },{
-    title: 'AppleWatch',
+    title: 'Apple-Watch',
     url: '#applewatch'
   },{
     title: 'Facebook',

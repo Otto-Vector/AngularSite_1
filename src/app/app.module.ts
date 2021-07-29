@@ -21,6 +21,9 @@ import { SocialsComponent } from './ui/header/socials/socials.component';
 import { GetButtonComponent } from './ui/reusable-elements/get-button/get-button.component';
 import { ViewButtonComponent } from './ui/reusable-elements/view-button/view-button.component';
 import { SliderButtonComponent } from './ui/hero-image/slider-button/slider-button.component';
+import { LabelComponent } from './ui/reusable-elements/label/label.component';
+import { ButtonViewComponent } from './ui/plan-and-manage/button-view/button-view.component';
+import { ButtonSeeComponent } from './ui/plan-and-manage/button-see/button-see.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { SliderButtonComponent } from './ui/hero-image/slider-button/slider-butt
     GetButtonComponent,
     ViewButtonComponent,
     SliderButtonComponent,
+    LabelComponent,
+    ButtonViewComponent,
+    ButtonSeeComponent,
   ],
   imports: [
     BrowserModule

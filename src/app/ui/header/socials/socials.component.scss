@@ -33,6 +33,7 @@
 
   &:hover { //перекрашивание в оттенок голубого
     filter: invert(53%) sepia(89%) saturate(2325%) hue-rotate(158deg);
+    //filter: invert(32%) sepia(11%) saturate(3552%) hue-rotate(193deg);
     transform: translateY(-1px);
 }
 }

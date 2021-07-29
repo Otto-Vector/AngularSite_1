@@ -16,6 +16,14 @@ export class HeroImageComponent implements OnInit {
     {title: "3rd", action: this.informator}
   ]
 
+  heroImage : string = 'hero-image'
+  container : string = this.heroImage+'__container'
+  label : string = this.heroImage+'__label'
+  header : string = this.heroImage+'__header'
+  content : string = this.heroImage+'__content'
+  sliders : string = this.heroImage+'__sliders'
+
+  textForLabel : string = 'PLAN YOUR LIFE'
 
   constructor() { }
 

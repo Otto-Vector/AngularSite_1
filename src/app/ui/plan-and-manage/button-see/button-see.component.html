@@ -1,0 +1,7 @@
+<button [ngClass] = "[
+        buttonSee,
+        button.mode || ''
+        ]"
+        (click)="button.action()">
+  {{button.text}}
+</button>

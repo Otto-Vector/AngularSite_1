@@ -1,7 +1,7 @@
 @import "src/styles/variables";
 @import "src/styles/mixins";
 
-.hero_image {
+.hero-image {
   text-align: center;
   position: relative;
 
@@ -24,18 +24,11 @@
     //height: rem(194);
   }
 
-  &__header {
-    color: $mainFontColor;
-    font-family: $headerFont;
-    font-weight: 500;
-    font-size: rem(10);
-    line-height: rem(11.72);
-    letter-spacing: .1em;
-
+  &__label {
     padding-bottom: rem(16);
   }
 
-  &__title {
+  &__header {
     color: $mainFontColor;
     font-family: $mainFont;
     font-weight: 300;
@@ -57,7 +50,7 @@
     font-weight: 400;
     font-size: rem(15);
     line-height: rem(28.65);
-
+    letter-spacing: .03em;
 
     padding: 0 rem(40);
   }

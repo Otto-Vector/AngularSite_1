@@ -1,1 +1,14 @@
-<p>plan-and-manage works!</p>
+<div [class]="planAndManage">
+  <div [class]="leftPanel">
+    <div [class]="wrap">
+      <app-label [class]="label" [labelText]="textForLabel"></app-label>
+      <header [class]="header"><b>Plan</b> and <b>manage</b></header>
+      <p [class]="content">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata. Solum patrioque no sea. Mea ex malis mollis oporteat. Eum an expetenda consequat.</p>
+      <app-button-view [class]="buttonView" [button]="forButtonView"></app-button-view>
+      <app-button-see [class]="buttonSee" [button]="forButtonSee"></app-button-see>
+    </div>
+  </div>
+  <div [class]="rightPanel">
+    <img [class]="image" src="../../../assets/images/image1.png" title="Plan and Manage">
+  </div>
+</div>

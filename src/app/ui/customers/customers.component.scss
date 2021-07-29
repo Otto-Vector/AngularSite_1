@@ -34,7 +34,7 @@
     &.bitbucket {
       background-image: url("svg/bitbucket.svg");
     }
-    &.applewatch {
+    &.apple-watch {
       background-image: url("svg/apple-watch.svg");
     }
     &.facebook {
@@ -48,7 +48,9 @@
     }
 
     &:hover { //перекрашивание в оттенок голубого
-      filter: invert(53%) sepia(89%) saturate(2325%) hue-rotate(158deg);
+      //filter: invert(53%) sepia(89%) saturate(2325%) hue-rotate(158deg);
+      //filter: invert(32%) sepia(11%) saturate(3552%) hue-rotate(193deg);
+      filter: invert(46%) sepia(84%) saturate(1605%) hue-rotate(204deg);
       transform: translateY(-2px);
     }
   }

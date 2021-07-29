@@ -13,6 +13,9 @@ interface NavItem {
 })
 export class NavMenuComponent implements OnInit {
 
+  navMenu : string = 'nav-menu'
+  navMenuItem : string = this.navMenu + '__item'
+
   @Input() navItem : NavItem[]
 
   constructor() {

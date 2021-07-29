@@ -1,0 +1,42 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.button-view {
+  @include size(rem(130),rem(43));
+  padding: rem(13) rem(37) rem(13) rem(25);
+
+  color: $white-color;
+  font: {
+    family: $mainFont;
+    style: normal;
+    weight: 700;
+    size: rem(13);
+  }
+  line-height: rem(16.25);
+
+  border-radius: 2px;
+  box-shadow: 0 rem(5) rem(15) rgba(188, 199, 255, 0.75);
+
+  background: {
+    color: $btnViewBgColor;
+    image:  url("svg/play.svg");
+    size: rem(7.2);
+    position: center right rem(18);
+    repeat: no-repeat;
+  }
+
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 35%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 35%);
+}
+
+}

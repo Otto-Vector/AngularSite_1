@@ -1,11 +1,11 @@
-<article class="hero_image">
-  <div class="hero_image__container">
-    <header class="hero_image__header">PLAN YOUR LIFE</header>
-    <h2 class="hero_image__title">Increase your <b>productivity</b></h2>
-    <h3 class="hero_image__content">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</h3>
+<article [class]="heroImage">
+  <div [class]="container">
+    <app-label [class]="label" [labelText]="textForLabel"></app-label>
+    <header [class]="header">Increase your <b>productivity</b></header>
+    <p [class]="content">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
   </div>
     <app-view-button [button]="btnView"></app-view-button>
-  <div class="hero_image__sliders">
+  <div [class]="sliders">
     <app-slider-button [slider]="sliderArr"></app-slider-button>
   </div>
 </article>

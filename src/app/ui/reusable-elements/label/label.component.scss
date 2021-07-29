@@ -1,0 +1,13 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.clean-label {
+  color: $mainFontColor;
+  font-family: $headerFont;
+  font-weight: 500;
+  font-size: rem(10);
+  line-height: rem(11.72);
+  letter-spacing: .1em;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
