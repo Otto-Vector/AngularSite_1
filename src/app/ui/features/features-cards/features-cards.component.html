@@ -1,0 +1,6 @@
+<div [class]="featuresCards">
+  <div *ngFor="let card of cards" [class]="wrapper">
+    <app-feature-card [card]="card"></app-feature-card>
+    <div *ngIf="card.mode !== last" [class]="line"></div>
+  </div>
+</div>

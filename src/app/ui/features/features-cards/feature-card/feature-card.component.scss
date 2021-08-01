@@ -1,0 +1,67 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.feature-card {
+  //width: rem(140);
+  //height: rem(200);
+
+  font-family: $fCardFont;
+  text-align: center;
+
+  &__icon {
+    @include size(rem(69));
+    margin: 0 auto;
+    background: {
+      //image: url("svg/overview.svg");
+      color: $fCardBgColor;
+      repeat: no-repeat;
+      position: center center;
+    };
+    border-radius: 50%;
+
+    &_overview {
+      background-image: url("svg/overview.svg");
+    }
+
+    &_files {
+      background-image: url("svg/files.svg");
+    }
+
+    &_chats {
+      background-image: url("svg/chats.svg");
+    }
+
+    &_events {
+      background-image: url("svg/events.svg");
+    }
+
+    @media screen and (max-width: $phoneWidth) {
+      margin: 0 10px;
+    }
+  }
+
+  &__header {
+    color: $fCardHFontColor;
+    font-weight: 700;
+    margin-top: rem(33);
+    line-height: rem(24.79);
+
+    @media screen and (max-width: $phoneWidth) {
+      margin-top: rem(15);
+    }
+  }
+
+  &__content {
+    width: rem(140);
+    height: rem(140);
+    color: $fCardCFontColor;
+    font-weight: 600;
+    font-style: normal;
+    line-height: rem(19.47);
+    margin-top: rem(25);
+
+    @media screen and (max-width: $phoneWidth) {
+      display: none;
+    }
+  }
+}

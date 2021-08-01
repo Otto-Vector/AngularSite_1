@@ -24,6 +24,9 @@ import { SliderButtonComponent } from './ui/hero-image/slider-button/slider-butt
 import { LabelComponent } from './ui/reusable-elements/label/label.component';
 import { ButtonViewComponent } from './ui/plan-and-manage/button-view/button-view.component';
 import { ButtonSeeComponent } from './ui/plan-and-manage/button-see/button-see.component';
+import { HeaderSmallComponent } from './ui/reusable-elements/header-small/header-small.component';
+import { FeatureCardComponent } from './ui/features/features-cards/feature-card/feature-card.component';
+import { FeaturesCardsComponent } from './ui/features/features-cards/features-cards.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { ButtonSeeComponent } from './ui/plan-and-manage/button-see/button-see.c
     LabelComponent,
     ButtonViewComponent,
     ButtonSeeComponent,
+    HeaderSmallComponent,
+    FeatureCardComponent,
+    FeaturesCardsComponent,
   ],
   imports: [
     BrowserModule

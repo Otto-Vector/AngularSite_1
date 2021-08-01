@@ -14,6 +14,7 @@
     line-height: rem(15);
     text-shadow: 0 0 5px $navShadowColor;
     margin: 0 rem(21);
+    transition: text-shadow 0.2s ease-in-out;
 
     @media screen and (max-width: $tableWidth) {
       margin: 0 rem(10);
@@ -22,9 +23,15 @@
       margin: 0 rem(5);
     }
 
-    &:hover {
-      font-weight: 700;
-      color: $navActFontColor;
+    &:hover,
+    &_active {
+      //font-weight: 700;
+      //color: $navActFontColor;
+      color: transparent;
+      text-shadow: 0 0 .7px $navActFontColor,
+                   0 0 .7px $navActFontColor,
+                   0 0 .7px $navActFontColor,
+                   0 0 5px $navShadowColor;
     }
   }
 }

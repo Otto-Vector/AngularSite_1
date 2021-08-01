@@ -1,0 +1,13 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.header-small {
+  color: $mainFontColor;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: rem(24);
+  line-height: rem(30);
+
+  text-align: center;
+}

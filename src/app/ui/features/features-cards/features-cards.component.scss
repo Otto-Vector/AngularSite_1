@@ -1,0 +1,29 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.features-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  //flex-wrap: wrap;
+  //flex: 0 1 31%;
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__line {
+    height: 45%;
+    min-width: rem(28);
+    border-bottom: 1px solid #DAE4FE;
+    margin: 0 rem(15);
+
+     @media screen and (max-width: $tableWidth) {
+      display: none;
+    }
+
+  }
+
+}

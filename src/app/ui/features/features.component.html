@@ -1,1 +1,14 @@
-<p>features works!</p>
+<div [class]="features">
+  <div [class]="wrapper">
+    <app-label [class]="label" [labelText]="labelText"></app-label>
+    <app-header-small [class]="header" [headerText]="headerText"></app-header-small>
+    <app-features-cards [class]="cards"></app-features-cards>
+    <div [class]="buttons">
+      <app-get-button [class]="readMore" [button]="buttonRead"></app-get-button>
+      <div [class]="line"></div>
+      <div [class]="or">OR</div>
+      <div [class]="line"></div>
+      <app-get-button [class]="getStarted" [button]="buttonGet"></app-get-button>
+    </div>
+  </div>
+</div>
