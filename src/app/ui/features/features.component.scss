@@ -11,7 +11,7 @@
 
   height: rem(885);
   width: 100%;
-  //padding: rem(171) rem(340);
+  padding: 0 rem(50);
 
   border-top: 1px solid $borderTopColor;
     background: {
@@ -25,9 +25,7 @@
   text-align: center;
 
   &__wrapper {
-    padding: 0 rem(50);
-    //@include size(rem(300));
-
+    //padding: 0 rem(50);
   }
 
   &__label {
@@ -72,7 +70,6 @@
       background-color: #DAE4FE;
       margin: 0 rem(15);
     }
-
 
     &__get-started {
 

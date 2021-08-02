@@ -1,1 +1,8 @@
-<p class="header">stats works!</p>
+<div [class]="stats">
+  <div *ngFor="let item of cards"
+    [class]="[statsItem, item.left? left : right]">
+    <img [class]="image" [src]="item.image" alt="">
+    <div [class]="statistics">{{item.statistics}}</div>
+    <div [class]="description">{{item.description}}</div>
+  </div>
+</div>

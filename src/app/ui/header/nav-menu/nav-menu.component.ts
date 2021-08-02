@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 interface NavItem {
+  active?: boolean
   content: string
   href: string
 }
@@ -15,6 +16,7 @@ export class NavMenuComponent implements OnInit {
 
   navMenu : string = 'nav-menu'
   navMenuItem : string = this.navMenu + '__item'
+  navMenuItemActive : string = this.navMenuItem + '_active'
 
   @Input() navItem : NavItem[]
 
@@ -22,7 +24,8 @@ export class NavMenuComponent implements OnInit {
     this.navItem = [
       {
         content: 'Home',
-        href: '#home'
+        href: '#home',
+        active: true
       },
       {
         content: 'Blog',

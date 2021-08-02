@@ -77,7 +77,7 @@
 
 /*
  * This mixin takes all the hassle out of creating that triangle you'll see coming out of most traditional tooltips,
- * all without images, you just specify it's colour, how big you want it, the direction it's going to come out of your
+ * all without ima_ges, you just specify it's colour, how big you want it, the direction it's going to come out of your
  * element and you're done!
  */
 @mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false){

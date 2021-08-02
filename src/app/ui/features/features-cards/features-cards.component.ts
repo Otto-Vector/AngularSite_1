@@ -15,8 +15,8 @@ export class FeaturesCardsComponent implements OnInit {
   cards : FeatureCard[] = [
     {mode: "overview", header: "Overview", content: 'Brute laoreet efficiendi id his, ea illum nonumes luptatum pro.'},
     {mode: "files", header: "Files", content: 'No vim nulla vitae intellegat. Ei enim error ius, solet atomorum conceptam ex has.'},
-    {mode: "chats", header: "Chats", content: 'Vim ne tacimates neglegentur. Erat diceret omittam at est.'},
-    {mode: "events", header: "Events", content: 'Nisl idque mel ea, nominati voluptatum.'}
+    {mode: "chats", header: "Meeting chats", content: 'Vim ne tacimates neglegentur. Erat diceret omittam at est.'},
+    {mode: "events", header: "Save events", content: 'Nisl idque mel ea, nominati voluptatum.'}
   ]
   last : string = this.cards[this.cards.length-1].mode
 

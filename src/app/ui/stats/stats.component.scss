@@ -1,0 +1,68 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.stats {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  height: rem(342);
+  background-color: $white-color;
+  border-top: 1px solid $borderTopColor;
+
+
+  &__item {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+
+    padding: 0 rem(94);
+    padding-top: rem(70);
+
+     @media screen and (max-width: $tableWidth) {
+        padding: 0 rem(60);
+        padding-top: rem(50);
+     }
+    &_left {
+      color: $white-color;
+      text-align: right;
+      align-items: flex-end;
+      background: linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    }
+
+    &_right {
+      color: $statsFontColor;
+      text-align: left;
+      align-items: flex-start;
+      background: linear-gradient(101.48deg, #E9EFFF 41.56%, #E0E9FF 81.53%);
+    }
+  }
+
+  &__image {
+    height: rem(70);
+  }
+
+  &__statistics {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(48);
+    line-height: rem(83.4);
+    letter-spacing: .03em;
+  }
+
+  &__description {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: rem(23.4);
+    letter-spacing: .03em;
+
+    max-width: rem(260);
+  }
+}
