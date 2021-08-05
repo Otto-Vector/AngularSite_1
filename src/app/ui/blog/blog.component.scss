@@ -12,6 +12,10 @@
   padding: rem(104) rem(143);
   text-align: center;
 
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: rem(70);
+  }
+
   &__label {
     display: block;
     margin-bottom: rem(20);
