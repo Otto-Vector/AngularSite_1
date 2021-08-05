@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ViewButton} from "../reusable-elements/view-button/view-button.component";
+import {ViewButton} from "./view-button/view-button.component";
 import {SliderButton} from "./slider-button/slider-button.component";
 
 @Component({

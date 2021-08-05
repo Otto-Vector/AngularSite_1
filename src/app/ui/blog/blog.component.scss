@@ -1,0 +1,24 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+//свайпер
+//@import "node_modules/swiper/swiper";
+//@import "node_modules/swiper/components/navigation";
+//@import "node_modules/swiper/components/pagination";
+
+.blog {
+  background-color: $bgBlogColor;
+  //background-color: green;
+  height: rem(865);
+  padding: rem(104) rem(143);
+  text-align: center;
+
+  &__label {
+    display: block;
+    margin-bottom: rem(20);
+  }
+
+  &__header {
+    display: block;
+    margin-bottom: rem(92);
+  }
+}

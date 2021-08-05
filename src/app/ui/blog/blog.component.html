@@ -1,1 +1,7 @@
-<p>blog works!</p>
+<div [class]="blog">
+  <app-label [class]="label" [labelText]="textForLabel"></app-label>
+  <app-header-small [class]="header" [headerText]="textForHeader"></app-header-small>
+  <div [class]="swiperWrapper">
+    <app-blog-swiper-element></app-blog-swiper-element>
+  </div>
+</div>

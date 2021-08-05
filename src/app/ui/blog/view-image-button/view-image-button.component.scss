@@ -1,0 +1,15 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.view-image-button {
+  @include size(65);
+  border-radius: 50%;
+  background: {
+    //color: $white-color;
+    color: green;
+    image: url("svg/search.svg");
+    repeat: no-repeat;
+    size: contain;
+    position: center center;
+  };
+}
