@@ -30,6 +30,7 @@ import { FeatureCardComponent } from './ui/features/features-cards/feature-card/
 import { FeaturesCardsComponent } from './ui/features/features-cards/features-cards.component';
 import { BlogSwiperElementComponent } from './ui/blog/blog-swiper-element/blog-swiper-element.component';
 import { ViewImageButtonComponent } from './ui/blog/view-image-button/view-image-button.component';
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { ViewImageButtonComponent } from './ui/blog/view-image-button/view-image
   ],
   imports: [
     BrowserModule,
-    SwiperModule
+    SwiperModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
