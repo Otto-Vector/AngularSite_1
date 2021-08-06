@@ -2,12 +2,14 @@
 @import "src/styles/mixins";
 
 .blog-swiper-element {
+  align-self: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  @include size(100%,rem(394));
+  @include size(rem(958),rem(394));
   padding: rem(63) rem(30);
+  //margin: 0 rem(100);
 
   background: $white-color;
   border: 1px solid $borderTopColor;

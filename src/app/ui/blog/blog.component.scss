@@ -1,9 +1,21 @@
 @import "src/styles/variables";
 @import "src/styles/mixins";
 //свайпер
-//@import "node_modules/swiper/swiper";
-//@import "node_modules/swiper/components/navigation";
-//@import "node_modules/swiper/components/pagination";
+@import "node_modules/swiper/swiper";
+@import "node_modules/swiper/components/navigation/navigation";
+@import "node_modules/swiper/components/pagination/pagination";
+
+ .swiper-slide {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding-bottom: rem(100);
+ }
+
+.swiper-button-prev, .swiper-button-next {
+  top: rem(197)
+}
+
 
 .blog {
   background-color: $bgBlogColor;
@@ -24,5 +36,13 @@
   &__header {
     display: block;
     margin-bottom: rem(92);
+  }
+
+  &__swiper-wrapper {
+    ////display: block;
+    ////width: 100%;
+    ////height: 100%;
+    ////padding: 0 rem(100);
+    //margin: rem(100);
   }
 }

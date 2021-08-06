@@ -1,7 +1,20 @@
 <div [class]="blog">
   <app-label [class]="label" [labelText]="textForLabel"></app-label>
   <app-header-small [class]="header" [headerText]="textForHeader"></app-header-small>
-  <div [class]="swiperWrapper">
-    <app-blog-swiper-element></app-blog-swiper-element>
-  </div>
+<!--  <div [class]="swiperWrapper">-->
+    <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="30"
+      [loop]="true"
+      [pagination]="{
+        clickable: true
+      }"
+      [navigation]="true"
+      [class]="swiperWrapper"
+  >
+      <ng-template *ngFor="let elem of blogSwiper" swiperSlide>
+        <app-blog-swiper-element [thisElement]="elem"></app-blog-swiper-element>
+      </ng-template>
+    </swiper>
+<!--  </div>-->
 </div>
