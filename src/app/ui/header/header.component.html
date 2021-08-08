@@ -1,6 +1,6 @@
-<div class="header">
-  <app-logo></app-logo>
-  <app-nav-menu></app-nav-menu>
-  <app-socials></app-socials>
-  <app-get-button [button]="btnGetStarted"></app-get-button>
+<div [class]="header.main">
+  <app-logo [class]="header.logo"></app-logo>
+  <app-nav-menu [class]="header.nav"></app-nav-menu>
+  <app-socials [class]="header.socials"></app-socials>
+  <app-get-button [class]="header.getButton" [button]="btnGetStarted"></app-get-button>
 </div>

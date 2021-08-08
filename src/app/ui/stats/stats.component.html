@@ -1,8 +1,11 @@
-<div [class]="stats">
+<div [class]="stats.main">
   <div *ngFor="let item of cards"
-    [class]="[statsItem, item.left? left : right]">
-    <img [class]="image" [src]="item.image" alt="">
-    <div [class]="statistics">{{item.statistics}}</div>
-    <div [class]="description">{{item.description}}</div>
+    [class]="[
+      stats.statsItem.main,
+      item.left? stats.statsItem.left : stats.statsItem.right
+      ]">
+    <img [class]="stats.image" [src]="item.image" alt="">
+    <div [class]="stats.statistics">{{item.statistics}}</div>
+    <div [class]="stats.description">{{item.description}}</div>
   </div>
 </div>

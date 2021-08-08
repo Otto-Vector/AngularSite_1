@@ -1,4 +1,4 @@
-<div [class]="navMenu">
+<nav [class]="navMenu">
   <a *ngFor="let item of navItem"
      [href]="item.href"
      [ngClass]="[
@@ -6,4 +6,4 @@
      item.active ? navMenuItemActive : ''
      ]"
   >{{item.content}}</a>
-</div>
+</nav>

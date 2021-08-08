@@ -3,6 +3,13 @@ import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.compo
 import SwiperCore, { Pagination, Navigation } from "swiper/core";
 
 SwiperCore.use([Pagination, Navigation]);
+
+interface Classes {
+  main: string
+  label: string
+  header: string
+  swiperWrapper : string
+}
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -11,10 +18,13 @@ SwiperCore.use([Pagination, Navigation]);
 })
 export class BlogComponent implements OnInit {
 
-  blog: string = 'blog'
-  label: string = this.blog+'__label'
-  header: string = this.blog+'__header'
-  swiperWrapper : string = this.blog+'__swiper-wrapper'
+  main_class: string = 'blog'
+  blog : Classes = {
+    main: this.main_class,
+    label: this.main_class+'__label',
+    header: this.main_class+'__header',
+    swiperWrapper : this.main_class+'__swiper-wrapper'
+  }
 
   textForLabel : string = 'our products'
   textForHeader : string = 'Start reading our blog'

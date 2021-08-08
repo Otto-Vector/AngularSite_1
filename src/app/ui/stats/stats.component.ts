@@ -1,5 +1,17 @@
 import {Component, Input, OnInit} from '@angular/core';
 
+interface Classes {
+  main : string
+  statsItem : {
+    main : string
+    left : string
+    right : string
+  }
+  image : string
+  statistics : string
+  description : string
+}
+
 export interface StatsCard {
   left : boolean
   image : string
@@ -14,13 +26,18 @@ export interface StatsCard {
 })
 export class StatsComponent implements OnInit {
 
-  stats : string = 'stats'
-  statsItem :string = this.stats + '__item'
-  left : string = this.statsItem + '_left'
-  right : string = this.statsItem + '_right'
-  image : string = this.stats + '__image'
-  statistics : string = this.stats + '__statistics'
-  description : string = this.stats + '__description'
+  main_class : string = 'stats'
+  stats : Classes = {
+    main : this.main_class,
+    statsItem: {
+      main : this.main_class + '__item',
+      left: this.main_class + '__item_left',
+      right: this.main_class + '__item_right',
+    },
+    image: this.main_class + '__image',
+    statistics: this.main_class + '__statistics',
+    description: this.main_class + '__description'
+  }
 
   @Input() cards : StatsCard[] = [{
     left : true,

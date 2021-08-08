@@ -25,7 +25,6 @@
   text-align: center;
 
   &__wrapper {
-    //padding: 0 rem(50);
   }
 
   &__label {
@@ -39,7 +38,6 @@
   }
 
   &__cards {
-
   }
 
   &__buttons {
@@ -49,30 +47,29 @@
     justify-content: center;
     justify-items: center;
     align-items: center;
-
-    &__read-more {
-
-    }
-
-    &__or {
-      color: #ADB3CB;
-      font-family: $fCardFont;
-      font-weight: 600;
-      font-style: normal;
-      font-size: rem(11);
-      line-height: rem(19.47);
-      text-align: center;
-    }
-
-    &__line {
-      height: 1px;
-      width: rem(15);
-      background-color: #DAE4FE;
-      margin: 0 rem(15);
-    }
-
-    &__get-started {
-
-    }
   }
+
+  &__read-more {
+  }
+
+  &__or {
+    color: #ADB3CB;
+    font-family: $fCardFont;
+    font-weight: 600;
+    font-style: normal;
+    font-size: rem(11);
+    line-height: rem(19.47);
+    text-align: center;
+  }
+
+  &__line {
+    height: 1px;
+    width: rem(15);
+    background-color: #DAE4FE;
+    margin: 0 rem(15);
+  }
+
+  &__get-started {
+  }
+
 }
