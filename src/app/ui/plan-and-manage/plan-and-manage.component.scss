@@ -5,8 +5,13 @@
   display: flex;
   width: 100%;
   height: rem(776);
+  //padding-bottom: rem(216);
   background-color: $bgPlanAndManageColor;
   border-top: solid 1px $borderTopColor;
+
+  @media screen and (max-width: $smDesktopWidth) {
+      height: rem(500);
+  }
 
   &__left-panel {
     display: flex;
@@ -80,5 +85,9 @@
   &__image {
     align-self: flex-start;
     padding-top: rem(170);
+
+    @media screen and (max-width: $smDesktopWidth) {
+      padding-top: rem(100);
+    }
   }
 }

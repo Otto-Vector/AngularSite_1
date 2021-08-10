@@ -3,7 +3,7 @@
 
 .slider_button {
   padding: 0;
-  background-color: $unactiveSliderColor;
+  background-color: $unactiveBulletColor;
   margin: 0 rem(8);
   height: rem(8);
   width: rem(8);
@@ -11,6 +11,6 @@
   cursor: pointer;
 
   &.active {
-    background-color: $activeSliderColor;
+    background-color: $activeBulletColor;
   }
 }

@@ -8,19 +8,22 @@
   align-items: center;
   flex-direction: column;
 
-
-  height: rem(885);
+  //height: rem(885);
   width: 100%;
-  padding: 0 rem(50);
+  padding: rem(171) rem(50);
+
+  @media screen and (max-width: $smDesktopWidth) {
+      padding: rem(100) rem(50);
+  }
 
   border-top: 1px solid $borderTopColor;
-    background: {
-      image: url("svg/clouds_more.svg");
-      color: white;
-      size: contain;
-      repeat: no-repeat;
-      position: center center;
-    };
+  background: {
+    image: url("svg/clouds_more.svg");
+    color: white;
+    size: contain;
+    repeat: no-repeat;
+    position: center center;
+  };
 
   text-align: center;
 
