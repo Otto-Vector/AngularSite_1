@@ -1,6 +1,20 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.component";
+import {
+  Action,
+  ButtonEvent,
+  ButtonType,
+  Image,
+  ImageModalEvent,
+  ModalGalleryService,
+  ModalGalleryRef,
+  ModalGalleryConfig,
+  LibConfig, ButtonsStrategy
+} from '@ks89/angular-modal-gallery';
+
+
 import SwiperCore, {Pagination, Navigation, Autoplay} from "swiper/core";
+import {GetButton} from "../reusable-elements/get-button/get-button.component";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -63,9 +77,64 @@ export class BlogComponent implements OnInit {
   }
   ]
 
-  constructor() { }
+  for_button : GetButton = {content:"VieW", mode: "gray", action: ()=>{this.openModal(0,1)}}
+  // images: Image[];
+
+  constructor(
+    private modalGalleryService: ModalGalleryService) { }
 
   ngOnInit(): void {
   }
+
+   images: Image[] = [
+    new Image(0, {
+      img: '../../../../assets/images/blog/image3.jpg',
+      extUrl: 'http://www.google.com'
+    }),
+    new Image(1, {
+      img: '../../../../assets/images/blog/image2.jpg',
+      description: 'Description 2'
+    }),
+    new Image(
+      2,
+      {
+        img: '../../../../assets/images/blog/image1.jpg',
+        description: 'Description 3',
+        extUrl: 'http://www.google.com'
+      }
+    ),
+    new Image(3, {
+      img: '../../../../assets/images/blog/image2.jpg',
+      description: 'Description 4',
+      extUrl: 'http://www.google.com'
+    }),
+    new Image(4, { img: '../../../../assets/images/blog/image3.jpg' })
+  ];
+
+  openModal(id: number, imageIndex: number): void {
+      const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
+        id: id,
+        images: this.images,
+        currentImage: this.images[imageIndex],
+          libConfig: {
+            previewConfig: {
+              visible: false
+            },
+            slideConfig: {
+              infinite: true,
+              sidePreviews: {
+                show: false
+              }
+            },
+          currentImageConfig: {
+            downloadable: true
+          },
+          buttonsConfig: {
+            visible: true,
+            strategy: ButtonsStrategy.SIMPLE
+          }
+        } as LibConfig
+      } as ModalGalleryConfig) as ModalGalleryRef;
+    }
 
 }
