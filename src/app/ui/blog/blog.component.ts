@@ -15,6 +15,9 @@ import {
 
 import SwiperCore, {Pagination, Navigation, Autoplay} from "swiper/core";
 import {GetButton} from "../reusable-elements/get-button/get-button.component";
+import {Subscription} from "rxjs";
+import {ViewImageButtonComponent} from "./view-image-button/view-image-button.component";
+import {ImageClickerService} from "./image-clicker.service";
 
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
@@ -44,49 +47,24 @@ export class BlogComponent implements OnInit {
   textForLabel : string = 'our products'
   textForHeader : string = 'Start reading our blog'
 
-  blogSwiper : blogSwiperElement[] = [
-    {
-    images: [
-      '../../../../assets/images/blog/image1.jpg',
-      '../../../../assets/images/blog/image2.jpg',
-      '../../../../assets/images/blog/image3.jpg'
-    ],
-    header: 'How to start planning',
-    text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
-    link: "#Blog1"
-  },
-    {
-    images: [
-      '../../../../assets/images/blog/image2.jpg',
-      '../../../../assets/images/blog/image1.jpg',
-      '../../../../assets/images/blog/image3.jpg'
-    ],
-    header: 'How to start planning2',
-    text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
-    link: "#Blog2"
-   },
-    {
-    images: [
-      '../../../../assets/images/blog/image3.jpg',
-      '../../../../assets/images/blog/image1.jpg',
-      '../../../../assets/images/blog/image2.jpg',
-    ],
-    header: 'How to start planning3',
-    text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
-    link: "#Blog3"
-  }
-  ]
+
 
   for_button : GetButton = {content:"VieW", mode: "gray", action: ()=>{this.openModal(0,1)}}
   // images: Image[];
 
+  subs: Subscription | undefined
   constructor(
-    private modalGalleryService: ModalGalleryService) { }
+    private modalGalleryService: ModalGalleryService,
+    private readonly viewImage : ImageClickerService
+  ) { }
 
   ngOnInit(): void {
+    this.subs = this.viewImage.imageNumber$.subscribe( (n)=> {
+      this.openModal(n,n)
+    })
   }
 
-   images: Image[] = [
+   galleryImages: Image[] = [
     new Image(0, {
       img: '../../../../assets/images/blog/image3.jpg',
       extUrl: 'http://www.google.com'
@@ -104,18 +82,19 @@ export class BlogComponent implements OnInit {
       }
     ),
     new Image(3, {
-      img: '../../../../assets/images/blog/image2.jpg',
+      img: '../../../../assets/images/plan-and-manage/image2.png',
       description: 'Description 4',
       extUrl: 'http://www.google.com'
     }),
-    new Image(4, { img: '../../../../assets/images/blog/image3.jpg' })
+    new Image(4, {
+      img: '../../../../assets/images/plan-and-manage/image3.png' })
   ];
 
-  openModal(id: number, imageIndex: number): void {
+   openModal(id: number, imageIndex: number): void {
       const dialogRef: ModalGalleryRef = this.modalGalleryService.open({
         id: id,
-        images: this.images,
-        currentImage: this.images[imageIndex],
+        images: this.galleryImages,
+        currentImage: this.galleryImages[imageIndex],
           libConfig: {
             previewConfig: {
               visible: false
@@ -135,6 +114,42 @@ export class BlogComponent implements OnInit {
           }
         } as LibConfig
       } as ModalGalleryConfig) as ModalGalleryRef;
-    }
+   }
 
+   get galleryImagesIds() : number[] {
+     let nId: number[] = []
+     for (let {id} of this.galleryImages)
+       nId.push(id)
+     return nId
+   }
+   get galleryImagesPaths() : string[] {
+     let imagePath: string[] = []
+     for (let {modal} of this.galleryImages)
+       imagePath.push(modal.img.toString())
+     return imagePath
+   }
+
+   blogSwiper : blogSwiperElement[] = [
+      {
+        imagesId: [ ...this.galleryImagesIds ],
+        images: [ ...this.galleryImagesPaths ],
+        header: 'How to start planning',
+        text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+        link: "#Blog1"
+    },
+      {
+        imagesId: [ ...this.galleryImagesIds ],
+        images: [ ...this.galleryImagesPaths ],
+        header: 'How to start planning2',
+        text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+        link: "#Blog2"
+     },
+      {
+        imagesId: [ ...this.galleryImagesIds ],
+        images: [ ...this.galleryImagesPaths ],
+        header: 'How to start planning3',
+        text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+        link: "#Blog3"
+    }
+    ]
 }

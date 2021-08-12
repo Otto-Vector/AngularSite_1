@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ImageClickerService} from "../image-clicker.service";
 
 @Component({
   selector: 'app-view-image-button',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewImageButtonComponent implements OnInit {
 
-  constructor() { }
+  @Input() n : number = 0
+  action : (arg:number)=> void = (n)=>{console.log(n)}
+
+
+  constructor( readonly imageIs : ImageClickerService) { }
 
   ngOnInit(): void {
   }

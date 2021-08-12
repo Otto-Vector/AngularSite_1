@@ -2,7 +2,8 @@ import {Component, Input, OnInit} from '@angular/core';
 import {GetButton} from "../../reusable-elements/get-button/get-button.component";
 
 export interface blogSwiperElement {
-  images : [string,string,string]
+  imagesId : number[]
+  images : string[]
   header : string
   text : string
   link : string
@@ -78,6 +79,7 @@ export class BlogSwiperElementComponent implements OnInit {
   }
 
   @Input() thisElement : blogSwiperElement = {
+    imagesId: [0,1,2],
     images: [...this.imagePath],
     header: 'How to start planning',
     text : 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',

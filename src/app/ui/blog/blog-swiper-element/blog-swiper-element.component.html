@@ -7,7 +7,9 @@
           'background-image': imageGradient[+image.key]+','
           +'url('+image.value+')'
          }"
-    ><app-view-image-button></app-view-image-button></div>
+    >
+      <app-view-image-button [n]="+image.key"></app-view-image-button>
+    </div>
 
   </div>
   <div [class]="classBlog.content.main">
