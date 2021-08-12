@@ -1,11 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.component";
 import {
-  Action,
-  ButtonEvent,
-  ButtonType,
   Image,
-  ImageModalEvent,
   ModalGalleryService,
   ModalGalleryRef,
   ModalGalleryConfig,
@@ -66,7 +62,7 @@ export class BlogComponent implements OnInit {
 
    galleryImages: Image[] = [
     new Image(0, {
-      img: '../../../../assets/images/blog/image3.jpg',
+      img: '../../../../assets/images/blog/image1.jpg',
       extUrl: 'http://www.google.com'
     }),
     new Image(1, {
@@ -76,7 +72,7 @@ export class BlogComponent implements OnInit {
     new Image(
       2,
       {
-        img: '../../../../assets/images/blog/image1.jpg',
+        img: '../../../../assets/images/blog/image3.jpg',
         description: 'Description 3',
         extUrl: 'http://www.google.com'
       }
@@ -138,8 +134,8 @@ export class BlogComponent implements OnInit {
         link: "#Blog1"
     },
       {
-        imagesId: [ ...this.galleryImagesIds ],
-        images: [ ...this.galleryImagesPaths ],
+        imagesId: [ ...this.galleryImagesIds ].reverse(),
+        images: [ ...this.galleryImagesPaths ].reverse(),
         header: 'How to start planning2',
         text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
         link: "#Blog2"
