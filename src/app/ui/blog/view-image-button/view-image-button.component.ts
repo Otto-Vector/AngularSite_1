@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ImageClickerService} from "../image-clicker.service";
+// import {ImageClickerService} from "../../../engine/image-clicker.service";
+import {ModalGalleryLocalService} from "../../../engine/modal-gallery-local.service";
 
 @Component({
   selector: 'app-view-image-button',
@@ -12,7 +13,7 @@ export class ViewImageButtonComponent implements OnInit {
   action : (arg:number)=> void = (n)=>{console.log(n)}
 
 
-  constructor( readonly imageIs : ImageClickerService) { }
+  constructor( readonly imageIs : ModalGalleryLocalService) { }
 
   ngOnInit(): void {
   }

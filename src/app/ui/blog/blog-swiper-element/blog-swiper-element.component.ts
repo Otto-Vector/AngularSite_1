@@ -12,7 +12,7 @@ interface Classes {
   main: string
     images: {
       main: string
-      image: [string,string,string]
+      image: string
     },
     content: {
       main: string
@@ -38,11 +38,7 @@ export class BlogSwiperElementComponent implements OnInit {
     main: this.main_class,
     images: {
       main: this.main_class+'__images',
-      image: [
-        this.main_class+'__image1',
-        this.main_class+'__image2',
-        this.main_class+'__image3'
-      ]
+      image: this.main_class+'__image',
     },
     content: {
       main: this.main_class+'__content',
@@ -67,6 +63,18 @@ export class BlogSwiperElementComponent implements OnInit {
     'linear-gradient(13.49deg, rgba(53, 170, 255, 0.68) 11.59%, rgba(90, 136, 255, 0) 96.88%)'
     ]
 
+
+
+  @Input() thisElement : blogSwiperElement = {
+    imagesId: [0,1,2],
+    images: [...this.imagePath],
+    header: 'How to start planning',
+    text : 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
+    link : '#blog_to_read'
+  }
+
+  invisibleText : string = ''
+
   readButton : GetButton = {
     content: 'Read now',
     mode: "blue",
@@ -78,20 +86,20 @@ export class BlogSwiperElementComponent implements OnInit {
     action: () => {console.log(this.thisElement.link)}
   }
 
-  @Input() thisElement : blogSwiperElement = {
-    imagesId: [0,1,2],
-    images: [...this.imagePath],
-    header: 'How to start planning',
-    text : 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
-    link : '#blog_to_read'
-  }
-
   constructor() {
 
   }
 
   ngOnInit(): void {
-
+    this.textCorrectTo(235)
   }
 
+  // изменение количества символов в контенте, для корректного отображения
+  textCorrectTo(length: number):void {
+    if (this.thisElement.text.length >= length) {
+      this.thisElement.text = this.thisElement.text.slice(0, length) + ' ...'
+    } else {
+      this.invisibleText = this.invisibleText.padEnd(length - this.thisElement.text.length, ' _')
+    }
+  }
 }

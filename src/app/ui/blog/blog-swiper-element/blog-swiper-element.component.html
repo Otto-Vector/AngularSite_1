@@ -1,20 +1,23 @@
 <div [class]="classBlog.main">
   <div [class]="classBlog.images.main">
 
-    <div *ngFor="let image of thisElement.images | keyvalue"
-         [class]="classBlog.images.image[+image.key]"
-         [ngStyle]="{
-          'background-image': imageGradient[+image.key]+','
-          +'url('+image.value+')'
-         }"
-    >
-      <app-view-image-button [n]="+image.key"></app-view-image-button>
-    </div>
+    <ng-container *ngFor="let image of thisElement.images | keyvalue">
+      <div *ngIf="+image.key < 3"
+           [class]="classBlog.images.image"
+           [ngStyle]="{
+            'background-image': imageGradient[+image.key]+','
+            +'url('+image.value+')'
+           }"
+      >
+        <app-view-image-button [n]="thisElement.imagesId[+image.key]"></app-view-image-button>
+      </div>
+    </ng-container>
 
   </div>
   <div [class]="classBlog.content.main">
     <div [class]="classBlog.content.header">{{thisElement.header}}</div>
     <div [class]="classBlog.content.text">{{thisElement.text}}
+      <span class="invisible">{{invisibleText}}</span>
     </div>
     <div [class]="classBlog.content.buttons.main">
       <app-get-button [class]="classBlog.content.buttons.leftButton" [button]="readButton"></app-get-button>
