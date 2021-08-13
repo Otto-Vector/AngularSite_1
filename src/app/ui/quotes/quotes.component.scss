@@ -2,19 +2,57 @@
 @import "src/styles/variables";
 
 .quotes {
+  display: flex;
+  flex-direction: row;
   border-top: 1px solid $borderTopColor;
   height: rem(479);
   background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
 
   &__left-panel {
-
+    @include flex-center;
+    width: 50%;
+    height: 100%;
   }
-  &__wrapper {
 
+  &__content {
+    margin-left: 20%;
+    width: rem(333);
   }
 
   &__label {
     display: block;
     padding-bottom: rem(31);
+  }
+
+  &__header {
+    color: $mainFontColor;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(36);
+    line-height: rem(45);
+
+    padding-bottom: rem(14);
+  }
+
+  &__text {
+    height: rem(78);
+    color: $textFontColor2;
+
+    font-family: $fCardFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: rem(23);
+    letter-spacing: 0.03em;
+  }
+
+  &__right-panel {
+    @include flex-center;
+    width: 50%;
+  }
+
+  &__slider {
+
   }
 }

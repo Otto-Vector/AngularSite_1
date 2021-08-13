@@ -10,4 +10,8 @@
   line-height: rem(30);
 
   text-align: center;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 }

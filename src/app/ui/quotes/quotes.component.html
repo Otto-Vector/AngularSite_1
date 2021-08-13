@@ -1,3 +1,15 @@
-<div class="quotes">
-
+<div [class]="quotes.main">
+  <div [class]="quotes.leftPanel.main">
+    <div [class]="quotes.leftPanel.content.main">
+      <app-label [class]="quotes.leftPanel.content.label"
+        [labelText]="textForLabel"></app-label>
+      <h2 [class]="quotes.leftPanel.content.header"
+        >{{textForHeader}}</h2>
+      <div [class]="quotes.leftPanel.content.text"
+        >{{textFortext}}</div>
+    </div>
+  </div>
+  <div [class]="quotes.rightPanel.main">
+    <app-quote-card-slide [class]="quotes.rightPanel.slider"></app-quote-card-slide>
+  </div>
 </div>

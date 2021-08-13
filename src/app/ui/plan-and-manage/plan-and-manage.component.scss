@@ -71,10 +71,7 @@
   }
 
   &__right-panel {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+    @include flex-center;
     width: 50%;
 
     @media screen and (max-width: $tableWidth) {

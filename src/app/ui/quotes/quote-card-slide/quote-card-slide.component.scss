@@ -1,0 +1,33 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.quote-card-slide {
+  position: relative;
+  box-sizing: border-box;
+  width: rem(423);
+  height: rem(175);
+  border: 1px solid $borderTopColor;
+
+  background: $white-color;
+  box-shadow: 0 rem(5) rem(50) #F3F5FA;
+  padding: rem(40) rem(70);
+
+  font-family: $headerFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(14);
+  line-height: rem(24);
+  letter-spacing: 0.03em;
+
+  text-align: justify;
+  color: #676F95;
+
+  &__image {
+    position: absolute;
+    left: 50%;
+    margin-left: rem(-31);
+    bottom: rem(-31);
+    @include size(rem(62));
+    border-radius: 50%;
+  }
+}

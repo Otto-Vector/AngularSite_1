@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 // import {ImageClickerService} from "../../../engine/image-clicker.service";
-import {ModalGalleryLocalService} from "../../../engine/modal-gallery-local.service";
+import {ModalGalleryLocalService} from "../../../../engine/modal-gallery-local.service";
 
 @Component({
   selector: 'app-view-image-button',

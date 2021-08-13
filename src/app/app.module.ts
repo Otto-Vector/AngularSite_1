@@ -29,7 +29,7 @@ import { HeaderSmallComponent } from './ui/reusable-elements/header-small/header
 import { FeatureCardComponent } from './ui/features/features-cards/feature-card/feature-card.component';
 import { FeaturesCardsComponent } from './ui/features/features-cards/features-cards.component';
 import { BlogSwiperElementComponent } from './ui/blog/blog-swiper-element/blog-swiper-element.component';
-import { ViewImageButtonComponent } from './ui/blog/view-image-button/view-image-button.component';
+import { ViewImageButtonComponent } from './ui/blog/blog-swiper-element/view-image-button/view-image-button.component';
 import {CommonModule} from "@angular/common";
 
 // ********************** angular-modal-gallery *****************************
@@ -42,6 +42,7 @@ import { GalleryModule } from '@ks89/angular-modal-gallery'; // <---------------
 // to install use both `npm i --save @fortawesome/fontawesome-svg-core` and `npm i --save @fortawesome/free-solid-svg-icons`
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { QuoteCardSlideComponent } from './ui/quotes/quote-card-slide/quote-card-slide.component';
 library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
 dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
 // *************************************************************************
@@ -76,6 +77,7 @@ dom.watch(); // Kicks off the process of finding <i> tags and replacing with <sv
     FeaturesCardsComponent,
     BlogSwiperElementComponent,
     ViewImageButtonComponent,
+    QuoteCardSlideComponent,
   ],
   imports: [
     BrowserModule,
