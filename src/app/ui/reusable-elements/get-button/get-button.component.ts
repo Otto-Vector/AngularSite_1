@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export interface GetButton {
   content : string
   mode    : 'blue' | 'pink' | 'gray' | 'white'
-  action : () => void
+  action  : () => void
 }
 
 @Component({
@@ -13,15 +13,16 @@ export interface GetButton {
 })
 export class GetButtonComponent implements OnInit {
 
-  get_button = 'get_button'
+  getButton: string = 'get-button'
+  buttonMode: string = ''
 
-  @Input() button : GetButton = {mode: 'white', content: '55', action: () => {}}
+  @Input() button : GetButton = {mode: 'white', content: 'no init', action: () => {}}
 
   constructor() {
-
   }
 
   ngOnInit(): void {
+    this.buttonMode = this.getButton+'--'+this.button.mode
   }
 
 }

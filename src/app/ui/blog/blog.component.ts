@@ -2,13 +2,7 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Subscription} from "rxjs";
 
 import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.component";
-// import {
-//   Image,
-//   ModalGalleryService,
-//   ModalGalleryRef,
-//   ModalGalleryConfig,
-//   LibConfig, ButtonsStrategy
-// } from '@ks89/angular-modal-gallery';
+
 
 import SwiperCore, {Pagination, Navigation, Autoplay} from "swiper/core";
 import {ModalGalleryLocalService} from "../../engine/modal-gallery-local.service";

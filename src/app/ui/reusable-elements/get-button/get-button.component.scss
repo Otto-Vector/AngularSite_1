@@ -1,21 +1,23 @@
 @import "src/styles/mixins";
 @import "src/styles/variables";
 
-.get_button {
+.get-button {
   padding: rem(13) rem(15) rem(13) rem(16);
   border-radius: 2px;
+
   font-family: $mainFont;
   font-style: normal;
   font-weight: bold;
   font-size: rem(13);
   line-height: rem(16.25);
-  //display: flex;
-  //flex-direction: row;
-  //justify-content: center;
-  //align-items: center;
+
   user-select: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
 
   &:hover {
     transform: translateY(-1px);
@@ -25,20 +27,21 @@
   &:active {
     transform: translateY(0);
     box-shadow: 0 1px 5px rgb(0 0 0 / 35%);
-}
-  &.blue {
+  }
+
+  &--blue {
     background-color: $btnBlueBgColor;
     color: $btnBlueFontColor;
   }
-  &.pink {
+  &--pink {
     background-color: $btnPingBgColor;
     color: $btnPinkFontColor;
   }
-  &.gray {
+  &--gray {
     background-color: $btnGrayBgColor;
     color: $btnGrayFontColor;
   }
-  &.white {
+  &--white {
     background-color: $btnWhiteBgColor;
     color: $btnWhiteFontColor;
   }
