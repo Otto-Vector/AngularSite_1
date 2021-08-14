@@ -2,11 +2,9 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Subscription} from "rxjs";
 
 import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.component";
+import {ModalGalleryLocalService} from "./engine/modal-gallery-local.service";
 
-
-import SwiperCore, {Pagination, Navigation, Autoplay} from "swiper/core";
-import {ModalGalleryLocalService} from "../../engine/modal-gallery-local.service";
-
+import SwiperCore, {Pagination, Navigation, Autoplay, SwiperOptions} from "swiper/core";
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 interface Classes {
@@ -47,6 +45,20 @@ export class BlogComponent implements OnInit {
     this.subs = this.modalGalleryServiceLocal.imageNumber$.subscribe( (n)=> {
       this.modalGalleryServiceLocal.openModal(n,n)
     })
+  }
+
+  swiperConfig: SwiperOptions = {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        clickable: true
+      },
+      autoplay: {
+        delay: 10000,
+        pauseOnMouseEnter: true
+      },
+      navigation: true,
   }
 
    blogSwiper : blogSwiperElement[] = [

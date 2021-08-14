@@ -10,6 +10,13 @@
     </div>
   </div>
   <div [class]="quotes.rightPanel.main">
-    <app-quote-card-slide [class]="quotes.rightPanel.slider"></app-quote-card-slide>
+    <swiper
+      [config]="swiperConfig"
+      [class]="quotes.rightPanel.slider"
+  >
+      <ng-template *ngFor="let elem of quoteSwiper" swiperSlide>
+         <app-quote-card-slide [quoteCardItem]="elem"></app-quote-card-slide>
+      </ng-template>
+    </swiper>
   </div>
 </div>

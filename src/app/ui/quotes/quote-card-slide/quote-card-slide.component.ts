@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-interface QuoteCard {
+
+export interface QuoteCard {
   text: string
   image: string
 }

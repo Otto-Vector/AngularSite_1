@@ -98,6 +98,11 @@
     font-weight: 400;
     font-size: rem(36);
     line-height: rem(45);
+
+    @media screen and (max-width: $tableWidth) {
+      font-size: rem(24);
+      line-height: rem(36);
+    }
   }
 
   &__content {
@@ -108,7 +113,13 @@
     font-size: rem(14);
     line-height: rem(27);
     letter-spacing: 0.03em;
+
     text-align: left;
+
+    //height: rem(116);
+    //text-overflow: ellipsis;
+    //overflow: hidden;
+
   }
 
   &__buttons {

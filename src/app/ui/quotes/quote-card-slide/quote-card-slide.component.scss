@@ -22,6 +22,11 @@
   text-align: justify;
   color: #676F95;
 
+  @media screen and (max-width: $smDesktopWidth) {
+      padding: rem(40);
+      margin: 0 rem(20);
+  }
+
   &__image {
     position: absolute;
     left: 50%;

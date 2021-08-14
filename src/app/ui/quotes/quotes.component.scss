@@ -1,6 +1,15 @@
 @import "src/styles/mixins";
 @import "src/styles/variables";
 
+@import "node_modules/swiper/swiper";
+@import "node_modules/swiper/components/navigation/navigation";
+@import "node_modules/swiper/components/pagination/pagination";
+
+div .swiper-slide .swiper-slide-next {
+    opacity: .25;
+}
+
+
 .quotes {
   display: flex;
   flex-direction: row;
@@ -53,6 +62,6 @@
   }
 
   &__slider {
-
+    width: 100%;
   }
 }
