@@ -26,6 +26,11 @@
       padding: rem(40);
       margin: 0 rem(20);
   }
+  @media screen and (max-width: $phoneWidth) {
+    padding: rem(30);
+    margin: 0 auto;
+    width: rem(360);
+  }
 
   &__image {
     position: absolute;

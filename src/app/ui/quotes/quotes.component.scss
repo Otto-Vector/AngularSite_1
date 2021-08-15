@@ -1,18 +1,11 @@
 @import "src/styles/mixins";
 @import "src/styles/variables";
 
-@import "node_modules/swiper/swiper";
-@import "node_modules/swiper/components/navigation/navigation";
-@import "node_modules/swiper/components/pagination/pagination";
-
-div .swiper-slide .swiper-slide-next {
-    opacity: .25;
-}
-
 
 .quotes {
   display: flex;
   flex-direction: row;
+
   border-top: 1px solid $borderTopColor;
   height: rem(479);
   background: linear-gradient(180deg, #EAF0FF 0%, #F6F9FF 100%);
@@ -20,7 +13,13 @@ div .swiper-slide .swiper-slide-next {
   &__left-panel {
     @include flex-center;
     width: 50%;
+    //flex-shrink: 0;
     height: 100%;
+
+    @media screen and (max-width: $smDesktopWidth) {
+      display: none;
+    }
+
   }
 
   &__content {
@@ -59,6 +58,10 @@ div .swiper-slide .swiper-slide-next {
   &__right-panel {
     @include flex-center;
     width: 50%;
+
+    @media screen and (max-width: $smDesktopWidth) {
+      width: 100%;
+    }
   }
 
   &__slider {

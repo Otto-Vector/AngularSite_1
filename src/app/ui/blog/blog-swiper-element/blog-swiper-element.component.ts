@@ -8,6 +8,7 @@ export interface blogSwiperElement {
   text : string
   link : string
 }
+
 interface Classes {
   main: string
     images: {
