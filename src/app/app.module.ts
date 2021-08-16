@@ -43,6 +43,7 @@ import { GalleryModule } from '@ks89/angular-modal-gallery'; // <---------------
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { QuoteCardSlideComponent } from './ui/quotes/quote-card-slide/quote-card-slide.component';
+import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-styled/swiper-local-styled.component';
 library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
 dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
 // *************************************************************************
@@ -78,6 +79,7 @@ dom.watch(); // Kicks off the process of finding <i> tags and replacing with <sv
     BlogSwiperElementComponent,
     ViewImageButtonComponent,
     QuoteCardSlideComponent,
+    SwiperLocalStyledComponent,
   ],
   imports: [
     BrowserModule,

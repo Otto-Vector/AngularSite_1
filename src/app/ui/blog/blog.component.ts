@@ -4,8 +4,10 @@ import {Subscription} from "rxjs";
 import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.component";
 import {ModalGalleryLocalService} from "./engine/modal-gallery-local.service";
 
-import SwiperCore, {Pagination, Navigation, Autoplay, SwiperOptions} from "swiper/core";
-SwiperCore.use([Pagination, Navigation, Autoplay]);
+import {SwiperOptions} from "swiper";
+
+// import SwiperCore, {Pagination, Navigation, Autoplay, SwiperOptions} from "swiper/core";
+// SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 interface Classes {
   main: string
@@ -19,7 +21,7 @@ interface Classes {
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class BlogComponent implements OnInit {
 
