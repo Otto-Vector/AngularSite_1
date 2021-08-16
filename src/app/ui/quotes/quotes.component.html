@@ -10,10 +10,9 @@
     </div>
   </div>
   <div [class]="quotes.rightPanel.main">
-    <app-swiper-local-styled>
+    <app-swiper-local-styled [class]="quotes.rightPanel.slider">
       <swiper
-        [config]="swiperConfig"
-        [class]="quotes.rightPanel.slider"
+        [config]="swiperConfig2"
       >
         <ng-template *ngFor="let elem of quoteSwiper" swiperSlide>
            <app-quote-card-slide [quoteCardItem]="elem"></app-quote-card-slide>
