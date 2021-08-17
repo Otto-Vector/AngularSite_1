@@ -13,6 +13,13 @@ import {
 })
 export class ModalGalleryLocalService {
 
+
+  randSize(min=550,max=850):number {
+    return  Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  private randomOfficeImage = (size:number = this.randSize())=> `https://source.unsplash.com/random/${size*1.3}x${size}?office`
+
   private imageNumber = new Subject<number>();
   public imageNumber$ = this.imageNumber.asObservable();
 
@@ -42,12 +49,14 @@ export class ModalGalleryLocalService {
       }
     ),
     new Image(3, {
-      img: '../../../../assets/images/plan-and-manage/image2.png',
-      description: 'Description 4',
-      extUrl: 'http://www.google.com'
+      img: this.randomOfficeImage(),
     }),
     new Image(4, {
-      img: '../../../../assets/images/plan-and-manage/image3.png' })
+      img: this.randomOfficeImage()
+    }),
+    new Image(5, {
+      img: this.randomOfficeImage(),
+    }),
   ];
 
    openModal(id: number, imageIndex: number): void {

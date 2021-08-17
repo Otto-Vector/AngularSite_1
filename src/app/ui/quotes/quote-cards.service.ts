@@ -6,43 +6,51 @@ import {QuoteCard} from "./quote-card-slide/quote-card-slide.component";
 })
 export class QuoteCardsService {
 
+  randSize(min=150,max=250):number {
+    return  Math.floor(Math.random() * (max - min + 1)) + min
+  }
+
+  private randomFace = (size:number=this.randSize())=> `https://source.unsplash.com/random/${size}x${size}?face`
+
+
   public quoteCards : QuoteCard[] = [
     {
       text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
-      image: '../../../../assets/images/faces/face1.jpg'
-    },
-    {
-      text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.'.trim(),
-      image: '../../../../assets/images/faces/face2.jpg'
-    },
-    {
-      text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.'.toUpperCase(),
       image: '../../../../assets/images/faces/face3.jpg'
     },
     {
+      text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.'.trim(),
+      image: this.randomFace()
+    },
+    {
+      text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.'.toUpperCase(),
+      image: this.randomFace()
+    },
+    {
       text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos',
-      image: '../../../../assets/images/faces/face4.jpg'
+      image: this.randomFace()
     },
     {
       text: ', vero tractatos ius an, in mel diceret persecuti.',
-      image: '../../../../assets/images/faces/face5.jpg'
+      image: this.randomFace()
     },
     {
       text: 'lkjlk;dfjsa;ldkfjasd;lkfj',
-      image: '../../../../assets/images/faces/face6.jpg'
+      image: this.randomFace()
     },
     {
       text: 'Hi',
-      image: '../../../../assets/images/faces/face7.jpg'
+      image: this.randomFace()
     },
     {
       text: 'ffa;ldfjka;dlsfj sdf;a dsa sdf asdf as',
-      image: '../../../../assets/images/faces/face8.jpg'
+      image: this.randomFace()
     },
     {
       text: 'Hi End',
-      image: '../../../../assets/images/faces/face9.jpg'
+      image: this.randomFace()
     },
   ]
+
   constructor() { }
 }
