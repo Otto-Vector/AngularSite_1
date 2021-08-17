@@ -14,11 +14,11 @@ import {
 export class ModalGalleryLocalService {
 
 
-  randSize(min=550,max=850):number {
+  randSize(min=50,max=850):number {
     return  Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  private randomOfficeImage = (size:number = this.randSize())=> `https://source.unsplash.com/random/${size*1.3}x${size}?office`
+  private randomOfficeImage = (pos:number = this.randSize())=> `https://source.unsplash.com/random/800x512?office?${pos}`
 
   private imageNumber = new Subject<number>();
   public imageNumber$ = this.imageNumber.asObservable();

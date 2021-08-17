@@ -6,11 +6,11 @@ import {QuoteCard} from "./quote-card-slide/quote-card-slide.component";
 })
 export class QuoteCardsService {
 
-  randSize(min=150,max=250):number {
+  randSize(min=15,max=350):number {
     return  Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  private randomFace = (size:number=this.randSize())=> `https://source.unsplash.com/random/${size}x${size}?face`
+  private randomFace = (pos:number=this.randSize())=> `https://source.unsplash.com/random/150x150?face?${pos}`
 
 
   public quoteCards : QuoteCard[] = [
