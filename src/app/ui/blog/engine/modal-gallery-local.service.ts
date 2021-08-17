@@ -14,11 +14,11 @@ import {
 export class ModalGalleryLocalService {
 
 
-  randSize(min=50,max=850):number {
+  randPos(min=50,max=850):number {
     return  Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  private randomOfficeImage = (pos:number = this.randSize())=> `https://source.unsplash.com/random/800x512?office?${pos}`
+  private randomOfficeImage = (pos:number = this.randPos())=> `https://source.unsplash.com/random/800x512?office?${pos}`
 
   private imageNumber = new Subject<number>();
   public imageNumber$ = this.imageNumber.asObservable();
@@ -34,20 +34,13 @@ export class ModalGalleryLocalService {
    galleryImages: Image[] = [
     new Image(0, {
       img: '../../../../assets/images/blog/image1.jpg',
-      extUrl: 'http://www.google.com'
     }),
     new Image(1, {
       img: '../../../../assets/images/blog/image2.jpg',
-      description: 'Description 2'
     }),
-    new Image(
-      2,
-      {
+    new Image(2, {
         img: '../../../../assets/images/blog/image3.jpg',
-        description: 'Description 3',
-        extUrl: 'http://www.google.com'
-      }
-    ),
+    }),
     new Image(3, {
       img: this.randomOfficeImage(),
     }),
@@ -55,6 +48,15 @@ export class ModalGalleryLocalService {
       img: this.randomOfficeImage()
     }),
     new Image(5, {
+      img: this.randomOfficeImage(),
+    }),
+    new Image(6, {
+      img: this.randomOfficeImage(),
+    }),
+    new Image(7, {
+      img: this.randomOfficeImage()
+    }),
+    new Image(8, {
       img: this.randomOfficeImage(),
     }),
   ];

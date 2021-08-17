@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-// import {ImageClickerService} from "../../../engine/image-clicker.service";
 import {ModalGalleryLocalService} from "../../engine/modal-gallery-local.service";
 
 @Component({
@@ -9,7 +8,7 @@ import {ModalGalleryLocalService} from "../../engine/modal-gallery-local.service
 })
 export class ViewImageButtonComponent implements OnInit {
 
-  @Input() n : number = 0
+  @Input() nPos : number = 0
   action : (arg:number)=> void = (n)=>{console.log(n)}
 
 

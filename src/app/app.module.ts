@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from "@angular/common";
+
 import { SwiperModule } from "swiper/angular";
 
 import { AppComponent } from './app.component';
@@ -30,7 +32,7 @@ import { FeatureCardComponent } from './ui/features/features-cards/feature-card/
 import { FeaturesCardsComponent } from './ui/features/features-cards/features-cards.component';
 import { BlogSwiperElementComponent } from './ui/blog/blog-swiper-element/blog-swiper-element.component';
 import { ViewImageButtonComponent } from './ui/blog/blog-swiper-element/view-image-button/view-image-button.component';
-import {CommonModule} from "@angular/common";
+import { QuoteCardSlideComponent } from './ui/quotes/quote-card-slide/quote-card-slide.component';
 
 // ********************** angular-modal-gallery *****************************
 import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
@@ -42,7 +44,6 @@ import { GalleryModule } from '@ks89/angular-modal-gallery'; // <---------------
 // to install use both `npm i --save @fortawesome/fontawesome-svg-core` and `npm i --save @fortawesome/free-solid-svg-icons`
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { QuoteCardSlideComponent } from './ui/quotes/quote-card-slide/quote-card-slide.component';
 import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-styled/swiper-local-styled.component';
 library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
 dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>

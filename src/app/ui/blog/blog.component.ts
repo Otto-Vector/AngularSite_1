@@ -5,9 +5,7 @@ import {blogSwiperElement} from "./blog-swiper-element/blog-swiper-element.compo
 import {ModalGalleryLocalService} from "./engine/modal-gallery-local.service";
 
 import {SwiperOptions} from "swiper";
-
-// import SwiperCore, {Pagination, Navigation, Autoplay, SwiperOptions} from "swiper/core";
-// SwiperCore.use([Pagination, Navigation, Autoplay]);
+import {BlogSwiperElementService} from "./engine/blog-swiper-element.service";
 
 interface Classes {
   main: string
@@ -38,14 +36,15 @@ export class BlogComponent implements OnInit {
 
   // подписчики здесь
   subs: Subscription | undefined
+
   constructor(
     private modalGalleryServiceLocal: ModalGalleryLocalService,
-    // private readonly viewImage : ImageClickerService
+    private blogSwiperElementService : BlogSwiperElementService
   ) { }
 
   ngOnInit(): void {
     this.subs = this.modalGalleryServiceLocal.imageNumber$.subscribe( (n)=> {
-      this.modalGalleryServiceLocal.openModal(n,n)
+      this.modalGalleryServiceLocal.openModal(1,n)
     })
   }
 
@@ -63,27 +62,5 @@ export class BlogComponent implements OnInit {
       navigation: true,
   }
 
-   blogSwiper : blogSwiperElement[] = [
-      {
-        imagesId: [ ...this.modalGalleryServiceLocal.galleryImagesIds ],
-        images: [ ...this.modalGalleryServiceLocal.galleryImagesPaths ],
-        header: 'How to start planning',
-        text: 'very small text.',
-        link: "#Blog1"
-    },
-      {
-        imagesId: [ ...this.modalGalleryServiceLocal.galleryImagesIds ].reverse(),
-        images: [ ...this.modalGalleryServiceLocal.galleryImagesPaths ].reverse(),
-        header: 'How to start planning2',
-        text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore ...',
-        link: "#Blog2"
-     },
-      {
-        imagesId: [ ...this.modalGalleryServiceLocal.galleryImagesIds ],
-        images: [ ...this.modalGalleryServiceLocal.galleryImagesPaths ],
-        header: 'How to start planning3',
-        text: 'VERY BIG TEXT Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore',
-        link: "#Blog3"
-    }
-    ]
+   blogSwiper : blogSwiperElement[] = this.blogSwiperElementService.blogSwiper
 }

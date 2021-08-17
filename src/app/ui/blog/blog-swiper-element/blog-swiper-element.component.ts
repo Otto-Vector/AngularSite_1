@@ -88,7 +88,6 @@ export class BlogSwiperElementComponent implements OnInit {
   }
 
   constructor() {
-
   }
 
   ngOnInit(): void {
