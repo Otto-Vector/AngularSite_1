@@ -1,0 +1,24 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.footer {
+  @include flex-center();
+  height: rem(287);
+  background: $white-color;
+
+  &__menu {
+    width: 100%;
+  }
+
+  &__copyright {
+    color: #AEB8D0;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: rem(15);
+    text-transform: capitalize;
+    padding-left: rem(216);
+    padding-top: rem(30);
+  }
+}

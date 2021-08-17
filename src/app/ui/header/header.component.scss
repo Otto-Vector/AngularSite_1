@@ -4,6 +4,7 @@
 .header {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-content: space-evenly;
   align-items: center;
@@ -14,23 +15,43 @@
 
   @media screen and (max-width: $smDesktopWidth) {
     height: rem(100);
+    justify-content: center;
+    flex-direction: column;
   }
 
   @media screen and (max-width: $tableWidth) {
     padding: 0 rem(50);
-    justify-content: center;
   }
+
   @media screen and (max-width: $phoneWidth) {
     padding: 0 rem(40);
   }
 
-  &__logo {}
+  &__left-panel {
+    display: flex;
+    flex-direction: row;
+    height: rem(40);
+  }
+
+  &__logo {
+    margin-right: rem(60);
+  }
 
   &__nav {}
 
+  &__right-panel {
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   &__socials {}
 
-  &__get-button {}
+  &__get-button {
+    margin-left: rem(40);
+  }
 }
 
 

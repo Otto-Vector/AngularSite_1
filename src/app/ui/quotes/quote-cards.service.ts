@@ -10,7 +10,7 @@ export class QuoteCardsService {
     return  Math.floor(Math.random() * (max - min + 1)) + min
   }
 
-  private randomFace = (pos:number=this.randPos())=> `https://source.unsplash.com/random/150x150?face?${pos}`
+  private randomFace = (pos:number=this.randPos())=> `https://source.unsplash.com/random/64x64?face?${pos}`
 
 
   public quoteCards : QuoteCard[] = [
