@@ -1,49 +1,59 @@
+@use "sass:math";
 @import "src/styles/variables";
 @import "src/styles/mixins";
 
+$expansion-panel--standart-color : #8E96B7;
+$expansion-panel--active-color : #495274;
+$expansion-panel--transition-duration : .3s;
+$expansion-panel--text-color : #8D96BD;
+$expansion-panel--text-font : $headerFont;
+
+
 .expansion-panel {
   width: 100%;
-  height: rem(82);
+  max-height: rem(82);
   border-bottom: 1px solid $borderTopColor;
-  transition: all 0.3s ease-in-out;
+  transition: all $expansion-panel--transition-duration ease-in-out;
   overflow: hidden;
 
-  &--active {
-    height: rem(176);
+  &--expand {
+    max-height: rem(400);
 
-  }
-
-  &--active {
     .expansion-panel {
 
       &__indicator {
         transform: rotate(180deg);
+
         svg path {
-          stroke: #495274;
+          stroke: $expansion-panel--active-color;
         }
       }
 
       &__header {
-        color: #495274;
-        text-shadow: 0 0 .7px #495274,
-                   0 0 .7px #495274,
-                   0 0 .7px #495274;
+        color: $expansion-panel--active-color;
+        text-shadow: 0 0 .7px $expansion-panel--active-color,
+                   0 0 .7px $expansion-panel--active-color,
+                   0 0 .7px $expansion-panel--active-color;
       }
     }
   }
 
   &__indicator {
     transform: rotate(0deg);
-    transition: all 0.3s ease-in-out;
+    transition: all $expansion-panel--transition-duration ease-in-out;
     padding: 0 rem(25);
     transform-origin: center center;
 
+    svg path {
+          stroke: $expansion-panel--standart-color;
+        }
   }
 
   &__header {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
     height: rem(82);
     cursor: pointer;
     font-family: $mainFont;
@@ -54,23 +64,32 @@
     letter-spacing: .03em;
 
     text-shadow: none;
-    transition: text-shadow .15s ease-in-out;
-    color: #8E96B7;
+
+    transition: text-shadow math.div($expansion-panel--transition-duration,2) ease-in-out;
+    color: $expansion-panel--standart-color;
   }
 
   &__content {
-    //height: 1px;
-    //transform: scaleY(0);
-    //transform-origin: top;
-    //transition: all 0.3s ease-in-out;
-
-    &--active {
-      //transform: scaleY(1);
-      //height: auto;
-    }
+    padding: rem(15);
+    padding-top: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
-  //&__border-bottom {
-  //  height: 1px;
-  //  border-bottom: 1px solid $borderTopColor;
-  //}
+
+  &__text {
+    flex-basis: rem(400);
+    margin-right: rem(60);
+    text-align: left;
+    font-family: $expansion-panel--text-font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(14);
+    line-height: rem(27);
+    letter-spacing: .03em;
+    color: $expansion-panel--text-color;
+  }
+
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ExpansionPanelService} from "./expansion-panel.service";
+import {ExpansionPanel} from "./expansion-panel/expansion-panel.component";
 
 interface Classes {
   main : string
@@ -25,10 +27,11 @@ export class FaqComponent implements OnInit {
   textForLabel = 'customer help'
   textForHeader = 'Frequently asked questions'
 
+  questions : ExpansionPanel[] | undefined
   constructor(
-
+    private expansionPanelService : ExpansionPanelService
   ) {
-
+    this.questions = expansionPanelService.questions
     }
 
   ngOnInit(): void {

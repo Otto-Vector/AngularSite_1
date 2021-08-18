@@ -3,6 +3,8 @@
   <div [class]="faq.wrapper">
     <app-label [class]="faq.label" [labelText]="textForLabel"></app-label>
     <app-header-small [class]="faq.header" [headerText]="textForHeader"></app-header-small>
-    <app-expansion-panel></app-expansion-panel>
+    <ng-container *ngFor="let elem of questions">
+      <app-expansion-panel [thisElement]="elem"></app-expansion-panel>
+    </ng-container>
   </div>
 </div>

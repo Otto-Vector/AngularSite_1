@@ -3,14 +3,13 @@
 
 .app-faq {
   @include flex-center();
-  //height: rem(964);
   padding: rem(170) rem(40);
   border-top: 1px solid $borderTopColor;
   background: $white-color;
 
   &__wrapper {
     text-align: center;
-    width: rem(743);
+    flex-basis: rem(743);
   }
 
   &__label {
