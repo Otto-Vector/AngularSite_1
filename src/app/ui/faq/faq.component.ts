@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {SwiperOptions} from "swiper";
-import {QuoteCard} from "../quotes/quote-card-slide/quote-card-slide.component";
-import {QuoteCardsService} from "../quotes/quote-cards.service";
+
+interface Classes {
+  main : string
+  label: string
+  header: string
+  wrapper: string
+}
+
 
 @Component({
   selector: 'app-faq',
@@ -10,30 +15,24 @@ import {QuoteCardsService} from "../quotes/quote-cards.service";
 })
 export class FaqComponent implements OnInit {
 
-  quoteSwiper: QuoteCard[]
+  private mainClass = 'app-faq'
+  faq : Classes = {
+    main   : this.mainClass,
+    label  : this.mainClass+'__label',
+    header : this.mainClass+'__header',
+    wrapper: this.mainClass+'__wrapper',
+  }
+  textForLabel = 'customer help'
+  textForHeader = 'Frequently asked questions'
+
   constructor(
-    readonly quoteCardsService : QuoteCardsService
+
   ) {
-    this.quoteSwiper = [...quoteCardsService.quoteCards].reverse()
+
     }
 
   ngOnInit(): void {
   }
-  swiperConfig2: SwiperOptions = {
-    slidesPerView: 1.5,
-    spaceBetween: 50,
-    pagination: {
-      clickable: true
-    },
-    autoplay: {
-      delay: 3000,
-      pauseOnMouseEnter: true
-    },
-    breakpoints: {
-        1280: {
-            slidesPerView: 2,
-          }
-        }
-  }
+
 
 }

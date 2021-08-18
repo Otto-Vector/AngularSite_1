@@ -1,0 +1,25 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.app-faq {
+  @include flex-center();
+  //height: rem(964);
+  padding: rem(170) rem(40);
+  border-top: 1px solid $borderTopColor;
+  background: $white-color;
+
+  &__wrapper {
+    text-align: center;
+    width: rem(743);
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: rem(20);
+  }
+
+  &__header {
+    display: block;
+    margin-bottom: rem(65);
+  }
+}

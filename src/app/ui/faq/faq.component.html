@@ -1,11 +1,8 @@
-<p>faq works!</p>
-<app-swiper-local-styled>
-      <swiper
-        [config]="swiperConfig2"
+<div [class]="faq.main">
 
-      >
-        <ng-template *ngFor="let elem of quoteSwiper" swiperSlide>
-           <app-quote-card-slide [quoteCardItem]="elem"></app-quote-card-slide>
-        </ng-template>
-      </swiper>
-  <app-swiper-local-styled>
+  <div [class]="faq.wrapper">
+    <app-label [class]="faq.label" [labelText]="textForLabel"></app-label>
+    <app-header-small [class]="faq.header" [headerText]="textForHeader"></app-header-small>
+    <app-expansion-panel></app-expansion-panel>
+  </div>
+</div>
