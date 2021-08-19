@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class LabelComponent implements OnInit {
 
   @Input() labelText: string = "no words (use 'content')"
+  @Input() whiteMode: boolean = false
 
   constructor() { }
 

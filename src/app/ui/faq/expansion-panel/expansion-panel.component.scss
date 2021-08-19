@@ -15,9 +15,10 @@ $expansion-panel--text-font : $headerFont;
   border-bottom: 1px solid $borderTopColor;
   transition: all $expansion-panel--transition-duration ease-in-out;
   overflow: hidden;
+  text-align: left;
 
   &--expand {
-    max-height: rem(400);
+    max-height: rem(700);
 
     .expansion-panel {
 
@@ -77,6 +78,10 @@ $expansion-panel--text-font : $headerFont;
     justify-content: flex-end;
     flex-wrap: nowrap;
     flex-direction: row;
+
+     @media screen and (max-width: $tableWidth) {
+        flex-wrap: wrap;
+     }
   }
 
   &__text {
@@ -90,6 +95,7 @@ $expansion-panel--text-font : $headerFont;
     line-height: rem(27);
     letter-spacing: .03em;
     color: $expansion-panel--text-color;
+    padding-bottom: rem(10);
   }
 
 }

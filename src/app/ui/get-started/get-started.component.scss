@@ -1,0 +1,64 @@
+@import "src/styles/mixins";
+@import "src/styles/variables";
+
+.get-started {
+  //height: rem(447);
+  padding: rem(91);
+
+  background: {
+    image:  url("svg/blueClouds.svg"),
+            linear-gradient(229.32deg, #6888FF 12.77%, #5E80FF 73.11%);
+    size: 100%, 100%;
+    position: center center, 0 0;
+    repeat: no-repeat;
+  }
+
+  text-align: center;
+
+  &__contetnt {
+    max-width: rem(712);
+    margin: 0 auto;
+  }
+  &__label {
+    display: block;
+    margin-bottom: rem(15);
+  }
+
+  &__header {
+    color: $white-color;
+    font-family: $mainFont;
+    font-weight: 300;
+    font-size: rem(48);
+    line-height: rem(60);
+    //letter-spacing: .01em;
+    //white-space: nowrap;
+
+    padding-bottom: rem(28);
+
+    b {
+      font-weight: 500;
+    }
+  }
+
+  &__text {
+    color: $white-color;
+    font-family: $headerFont;
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: rem(29);
+    letter-spacing: .03em;
+    text-align: center;
+    margin-bottom: rem(47);
+  }
+
+  &__buttons {
+  }
+
+  &__white-button {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  &__white-button {
+  }
+}

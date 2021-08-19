@@ -3,22 +3,17 @@ import {ButtonView} from "./button-view/button-view.component";
 import {ButtonSee} from "./button-see/button-see.component";
 
 interface Classes {
-  main : string
-  leftPanel : {
-    main : string
-    wrap : {
-      main : string
-      label : string
-      header : string
-      content : string
-      buttonView : string
-      buttonSee : string
-    }
-  }
-  rightPanel : {
-    main : string
-    image : string
-  }
+    main: string,
+    leftPanel: string
+    wrap: string
+    label: string
+    header: string
+    content: string
+    buttons: string
+    buttonView: string
+    buttonSee: string
+    rightPanel: string
+    image: string
 }
 
 @Component({
@@ -31,21 +26,16 @@ export class PlanAndManageComponent implements OnInit {
   main_class : string = 'plan-and-manage'
   planAndManage : Classes = {
     main: this.main_class,
-    leftPanel: {
-      main: this.main_class + '__left-panel',
-      wrap: {
-        main: this.main_class + '__wrap',
-        label: this.main_class + '__label',
-        header: this.main_class + '__header',
-        content: this.main_class + '__content',
-        buttonView: this.main_class + '__button-view',
-        buttonSee: this.main_class + '__button-see',
-      },
-    },
-    rightPanel: {
-      main : this.main_class + '__right-panel',
-      image: this.main_class + '__image'
-    }
+    leftPanel: this.main_class + '__left-panel',
+    wrap: this.main_class + '__wrap',
+    label: this.main_class + '__label',
+    header: this.main_class + '__header',
+    content: this.main_class + '__content',
+    buttons: this.main_class + '__buttons',
+    buttonView: this.main_class + '__button-view',
+    buttonSee: this.main_class + '__button-see',
+    rightPanel: this.main_class + '__right-panel',
+    image: this.main_class + '__image'
   }
 
   textForLabel: string = 'DESKTOP AND MOBILE APP'

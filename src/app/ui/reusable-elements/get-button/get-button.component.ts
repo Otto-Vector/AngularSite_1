@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 export interface GetButton {
   content : string
-  mode    : 'blue' | 'pink' | 'gray' | 'white'
+  mode    : 'blue' | 'pink' | 'gray' | 'white' | 'no-fill'
   action  : () => void
 }
 

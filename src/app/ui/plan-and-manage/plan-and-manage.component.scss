@@ -63,6 +63,12 @@
     margin-bottom: rem(47);
   }
 
+  &__buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+
   &__button-view {
 
   }

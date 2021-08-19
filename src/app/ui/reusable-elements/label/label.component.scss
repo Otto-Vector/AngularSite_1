@@ -10,4 +10,8 @@
   letter-spacing: .1em;
   white-space: nowrap;
   text-transform: uppercase;
+
+  &--white {
+    color: $white-color;
+  }
 }
