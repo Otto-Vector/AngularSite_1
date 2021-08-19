@@ -6,7 +6,7 @@ $expansion-panel--standart-color : #8E96B7;
 $expansion-panel--active-color : #495274;
 $expansion-panel--transition-duration : .3s;
 $expansion-panel--text-color : #8D96BD;
-$expansion-panel--text-font : $headerFont;
+$expansion-panel--text-font : $Roboto;
 
 
 .expansion-panel {
@@ -57,7 +57,7 @@ $expansion-panel--text-font : $headerFont;
 
     height: rem(82);
     cursor: pointer;
-    font-family: $mainFont;
+    font-family: $Quicksand;
     font-style: normal;
     font-weight: 500;
     font-size: rem(15);

@@ -1,0 +1,43 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+$input-background : #EFEFF7;
+$input-fontColor  : #7A85AD;
+
+.input-field {
+  min-width: rem(280);
+  font-family: $Quicksand; //переназначаем шрифт, потому что input находится в label и наследует
+  color: $input-fontColor;
+  outline: none; //чтобы input не подсвечивался
+  box-sizing: border-box;
+  background: $input-background;
+  border: solid {
+    color: $input-background;
+    radius: rem(5);
+    width: rem(1);
+  }
+
+  transition-property: border;
+  transition-duration: .3s;
+
+  padding: rem(21);
+
+  &:focus, &:hover {
+    border-color: color($input-background);
+  }
+
+  &:valid { //поставил, потому что менялся цвет в настройках браузера при разфокусировке
+    color: green;
+  }
+
+  &:invalid {
+    color: red;
+  }
+
+  &:active {
+  }
+
+  @include placeholder {
+    color: $input-fontColor;
+  }
+}

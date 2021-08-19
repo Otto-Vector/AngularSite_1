@@ -3,6 +3,7 @@
 
 .blog {
   background-color: $bgBlogColor;
+  border-top: solid 1px $borderTopColor;
   //height: rem(865);
   padding: rem(104) rem(143);
   text-align: center;

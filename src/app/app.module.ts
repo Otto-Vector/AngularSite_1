@@ -46,6 +46,8 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core';
 import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
 import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-styled/swiper-local-styled.component';
 import { ExpansionPanelComponent } from './ui/faq/expansion-panel/expansion-panel.component';
+import { InputFieldEmailComponent } from './ui/newsletter/input-field-email/input-field-email.component';
+import { ButtonSaveMeComponent } from './ui/newsletter/button-save-me/button-save-me.component';
 library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
 dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
 // *************************************************************************
@@ -83,6 +85,8 @@ dom.watch(); // Kicks off the process of finding <i> tags and replacing with <sv
     QuoteCardSlideComponent,
     SwiperLocalStyledComponent,
     ExpansionPanelComponent,
+    InputFieldEmailComponent,
+    ButtonSaveMeComponent,
   ],
   imports: [
     BrowserModule,

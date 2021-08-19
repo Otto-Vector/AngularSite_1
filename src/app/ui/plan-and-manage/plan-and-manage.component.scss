@@ -39,7 +39,7 @@
 
   &__header {
     color: $mainFontColor;
-    font-family: $mainFont;
+    font-family: $Quicksand;
     font-weight: 400;
     font-size: rem(36);
     line-height: rem(45);
@@ -54,7 +54,7 @@
 
   &__content {
     color: $textFontColor;
-    font-family: $headerFont;
+    font-family: $Roboto;
     font-weight: 400;
     font-size: rem(15);
     line-height: rem(29);

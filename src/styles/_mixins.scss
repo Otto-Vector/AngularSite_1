@@ -1,5 +1,14 @@
 @use "sass:math";
 
+//позволяет передавать все разновидности placeholder()
+@mixin placeholder {
+  &::placeholder {@content; opacity: .5;}
+  &::-webkit-input-placeholder {@content; opacity: .5;}
+  &:-moz-placeholder           {@content; opacity: .5;}
+  &::-moz-placeholder          {@content; opacity: .5;}
+  &:-ms-input-placeholder      {@content; opacity: .5;}
+}
+
 //миксин, чтобы все комппонетны в центре
 @mixin flex-center {
   display: flex;

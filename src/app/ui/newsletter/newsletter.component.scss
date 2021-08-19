@@ -1,0 +1,55 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.newsletter {
+  background-color: $white-color;
+  border-top: solid 1px $borderTopColor;
+  padding: rem(119) 0;
+  @include flex-center();
+  flex-wrap: wrap;
+
+  &__left-panel {
+    text-align: left;
+    flex-basis: rem(330);
+    margin-right: rem(80);
+
+    @media screen and (max-width: $tableWidth) {
+       text-align: center;
+     }
+  }
+
+  &__header {
+    color: $mainFontColor;
+    font-family: $Quicksand;
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: rem(22);
+    padding-bottom: rem(18);
+  }
+
+  &__text {
+    color: $textFontColor;
+    font-family: $Roboto;
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: rem(26);
+    letter-spacing: .03em;
+
+
+  }
+
+  &__right-panel {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__input-post {
+
+  }
+  &__button-save {
+
+  }
+}

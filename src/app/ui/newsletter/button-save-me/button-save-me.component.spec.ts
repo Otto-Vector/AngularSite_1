@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NewsletterComponent } from './newsletter.component';
+import { ButtonSaveMeComponent } from './button-save-me.component';
 
-describe('NewsletterComponent', () => {
-  let component: NewsletterComponent;
-  let fixture: ComponentFixture<NewsletterComponent>;
+describe('ButtonSaveMeComponent', () => {
+  let component: ButtonSaveMeComponent;
+  let fixture: ComponentFixture<ButtonSaveMeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NewsletterComponent ]
+      declarations: [ ButtonSaveMeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NewsletterComponent);
+    fixture = TestBed.createComponent(ButtonSaveMeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

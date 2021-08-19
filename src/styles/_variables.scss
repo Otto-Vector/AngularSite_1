@@ -1,6 +1,6 @@
-$mainFont                : Quicksand, "Open Sans", Arial;
-$headerFont              : Roboto, "Open Sans", Arial;
-$fCardFont               : 'Open Sans', Arial;
+$Quicksand               : Quicksand, "Open Sans", Arial;
+$Roboto                  : Roboto, "Open Sans", Arial;
+$OpenSans                : 'Open Sans', Arial;
 
 $mainFontColor           : #3D4F9F;
 $textFontColor           : #8D96BD;
@@ -48,7 +48,7 @@ $mainLineHeight          : rem(15);
 
 $maxDesktopWidth         : 1440px;
 $desktopWidth            : 1280px;
-$smDesktopWidth          : 1024px; //было 980px
+$smDesktopWidth          : 1024px;
 $tableWidth              : 768px;
 $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
