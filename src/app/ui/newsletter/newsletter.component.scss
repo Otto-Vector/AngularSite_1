@@ -1,7 +1,7 @@
 @import "src/styles/variables";
 @import "src/styles/mixins";
 
-.newsletter {
+.news-letter {
   background-color: $white-color;
   border-top: solid 1px $borderTopColor;
   padding: rem(119) 0;
@@ -11,10 +11,12 @@
   &__left-panel {
     text-align: left;
     flex-basis: rem(330);
-    margin-right: rem(80);
+    margin: 0 rem(80);
 
-    @media screen and (max-width: $tableWidth) {
-       text-align: center;
+    @media screen and (max-width: $smDesktopWidth) {
+      text-align: center;
+      //margin-right: 0;
+      margin-bottom: rem(40);
      }
   }
 
@@ -46,10 +48,18 @@
     flex-direction: row;
   }
 
-  &__input-post {
-
+  &__input-email {
+    flex-shrink: 0;
+    display: inline-block;
+    margin-right: rem(14);
   }
   &__button-save {
+    flex-shrink: 0;
+    display: block;
+    flex-basis: rem(159);
 
+    @media screen and (max-width: $tableWidth) {
+      flex-shrink: 1;
+    }
   }
 }

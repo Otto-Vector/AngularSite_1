@@ -1,12 +1,12 @@
-<div class="newsletter">
-  <div class="newsletter__left-panel">
-    <div class="newsletter__header">Sign up for newsletter</div>
-    <div class="newsletter__text">
-      Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu, homero alterum.
-    </div>
+<div [class]="newsLetter.main">
+  <div [class]="newsLetter.leftPanel">
+    <header [class]="newsLetter.header">{{forHeader}}</header>
+    <p [class]="newsLetter.text">
+      {{forText}}
+    </p>
   </div>
-  <div class="newsletter__right-panel">
-    <app-input-field-email class="newsletter__input-post"></app-input-field-email>
-    <app-get-button class="newsletter__button-save" textContent="Save me"></app-get-button>
+  <div [class]="newsLetter.rightPanel">
+    <app-input-field-email [class]="newsLetter.inputEmail"></app-input-field-email>
+    <app-button-save-me [class]="newsLetter.buttonSave" [button]="forButton"></app-button-save-me>
   </div>
 </div>

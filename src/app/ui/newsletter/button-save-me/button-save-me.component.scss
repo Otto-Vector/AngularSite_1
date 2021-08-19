@@ -1,0 +1,38 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+$button-save-me--background-color: #4D6CE1;
+
+.button-save-me  {
+  height: rem(59);
+  //width: rem(159);
+  width: 100%;
+  padding: rem(21);
+
+  color: $white-color;
+  font-family: $Quicksand;
+  font-style: normal;
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: rem(16);
+  white-space: nowrap;
+
+  background: $button-save-me--background-color;
+  box-shadow: 0 rem(5) rem(15) rgba(116, 104, 255, 0.2);
+  border-radius: rem(5);
+
+
+  &:first-letter {
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgb(0 0 0 / 35%);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 5px rgb(0 0 0 / 35%);
+  }
+  }

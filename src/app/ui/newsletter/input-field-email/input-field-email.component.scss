@@ -1,18 +1,23 @@
 @import "src/styles/variables";
 @import "src/styles/mixins";
 
-$input-background : #EFEFF7;
-$input-fontColor  : #7A85AD;
+$input--background : #EFEFF7;
+$input--fontColor  : $mainFontColor;
+$input-placeholder--fontColor : #7A85AD;
 
 .input-field {
   min-width: rem(280);
-  font-family: $Quicksand; //переназначаем шрифт, потому что input находится в label и наследует
-  color: $input-fontColor;
+  font-family: $Quicksand;
+  font-stretch: normal;
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: rem(16);
+  color: $input--fontColor;
   outline: none; //чтобы input не подсвечивался
   box-sizing: border-box;
-  background: $input-background;
+  background: $input--background;
   border: solid {
-    color: $input-background;
+    color: $input--background;
     radius: rem(5);
     width: rem(1);
   }
@@ -23,21 +28,21 @@ $input-fontColor  : #7A85AD;
   padding: rem(21);
 
   &:focus, &:hover {
-    border-color: color($input-background);
+    border-color: $input-placeholder--fontColor;
   }
 
   &:valid { //поставил, потому что менялся цвет в настройках браузера при разфокусировке
-    color: green;
+    color: $input--fontColor;
   }
 
   &:invalid {
-    color: red;
+    color: $input-placeholder--fontColor;
   }
 
   &:active {
   }
 
   @include placeholder {
-    color: $input-fontColor;
+    color: $input-placeholder--fontColor;
   }
 }

@@ -36,12 +36,12 @@ export class HeroImageComponent implements OnInit {
 
   textForLabel : string = 'PLAN YOUR LIFE'
 
-  btnView : ViewButton = {action: () => {console.log("ViewButton from Hero component")}}
-  sliderArr: SliderButton[] = [
-    {title: "first", active: true, action: this.informator},
-    {title: "second", action: this.informator},
-    {title: "3rd", action: this.informator}
-  ]
+  btnView : ViewButton = {action: () => {window.open('https://youtu.be/vDYP6AKw8bk', '_blank')}}
+  // sliderArr: SliderButton[] = [
+  //   {title: "first", active: true, action: this.informator},
+  //   {title: "second", action: this.informator},
+  //   {title: "3rd", action: this.informator}
+  // ]
   constructor() { }
 
   ngOnInit(): void {
