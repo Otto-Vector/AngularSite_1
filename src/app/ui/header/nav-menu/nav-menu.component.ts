@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 
 interface NavItem {
   active?: boolean
@@ -46,7 +46,20 @@ export class NavMenuComponent implements OnInit {
     ]
   }
 
-  ngOnInit(): void {
+  scrollTo(fragment: string): void {
+        const targetElement = document.querySelector(fragment);
+        if (fragment && targetElement) {
+            console.log('going to'+fragment)
+            targetElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+
+        } else {
+            console.log('nothing todo')
+            window.scrollTo(0, 0);
+        }
+    }
+
+
+  ngOnInit() {
   }
 
 }

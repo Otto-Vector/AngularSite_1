@@ -1,16 +1,16 @@
 <div [class]="quotes.main">
-  <div [class]="quotes.leftPanel.main">
-    <div [class]="quotes.leftPanel.content.main">
-      <app-label [class]="quotes.leftPanel.content.label"
+  <div [class]="quotes.leftPanel">
+    <div [class]="quotes.content">
+      <app-label [class]="quotes.label"
         [labelText]="textForLabel"></app-label>
-      <h2 [class]="quotes.leftPanel.content.header"
+      <h2 [class]="quotes.header"
         >{{textForHeader}}</h2>
-      <div [class]="quotes.leftPanel.content.text"
+      <div [class]="quotes.text"
         >{{textFortext}}</div>
     </div>
   </div>
-  <div [class]="quotes.rightPanel.main">
-    <app-swiper-local-styled [class]="quotes.rightPanel.slider">
+  <div [class]="quotes.rightPanel">
+    <app-swiper-local-styled [class]="quotes.slider">
       <swiper
         [config]="swiperConfig2"
       >

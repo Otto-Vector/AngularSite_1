@@ -31,6 +31,7 @@ export class HeaderComponent implements OnInit {
 
   btnGetStarted : GetButton = {content: 'Get started', mode: 'blue', action: ()=> {console.log('Get started')}}
 
+  // targetElement.scrollIntoView({behavior: "smooth"})
   constructor() { }
 
   ngOnInit(): void {

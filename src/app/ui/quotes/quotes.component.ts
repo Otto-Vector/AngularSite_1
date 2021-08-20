@@ -4,24 +4,15 @@ import {SwiperOptions} from "swiper";
 import {QuoteCardsService} from "./quote-cards.service";
 
 
-// import SwiperCore, {Pagination, Autoplay} from "swiper/core";
-// SwiperCore.use([Pagination, Autoplay]);
-
 interface Classes {
   main: string
-  leftPanel: {
-    main: string
-    content: {
-      main: string
+  leftPanel:  string
+    content: string
       label: string
       header: string
       text: string
-    }
-  }
-  rightPanel: {
-    main: string
+  rightPanel: string
     slider: string
-  }
 }
 
 
@@ -35,20 +26,14 @@ export class QuotesComponent implements OnInit {
   private readonly mainClass: string = 'quotes'
   readonly quotes : Classes = {
     main: this.mainClass,
-    leftPanel: {
-      main: this.mainClass+'__left-panel',
-      content: {
-        main: this.mainClass+'__content',
+    leftPanel: this.mainClass+'__left-panel',
+      content: this.mainClass+'__content',
         label: this.mainClass+'__label',
         header: this.mainClass+'__header',
         text: this.mainClass+'__text',
-      }
-    },
-    rightPanel: {
-      main: this.mainClass+'__right-panel',
+    rightPanel: this.mainClass+'__right-panel',
       slider: this.mainClass+'__slider',
     }
-  }
 
   readonly textForLabel: string = 'TESTIMOnials'
   readonly textForHeader: string = `Customers's quotes`

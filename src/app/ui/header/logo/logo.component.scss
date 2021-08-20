@@ -2,6 +2,11 @@
 @import "src/styles/mixins";
 .logo {
   @include size(rem(26));
-  background: $navActFontColor;
+  background-color: $navActFontColor;
+  background-image: url("svg/logo.svg");
+  background-position: center center;
+  background-size: rem(20);
+  background-repeat: no-repeat;
   border-radius: 50%;
+
 }

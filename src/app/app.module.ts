@@ -48,6 +48,7 @@ import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-
 import { ExpansionPanelComponent } from './ui/faq/expansion-panel/expansion-panel.component';
 import { InputFieldEmailComponent } from './ui/newsletter/input-field-email/input-field-email.component';
 import { ButtonSaveMeComponent } from './ui/newsletter/button-save-me/button-save-me.component';
+import {RouterModule} from "@angular/router";
 library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
 dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
 // *************************************************************************
@@ -88,12 +89,13 @@ dom.watch(); // Kicks off the process of finding <i> tags and replacing with <sv
     InputFieldEmailComponent,
     ButtonSaveMeComponent,
   ],
-  imports: [
-    BrowserModule,
-    SwiperModule,
-    CommonModule,
-    GalleryModule
-  ],
+    imports: [
+        BrowserModule,
+        SwiperModule,
+        CommonModule,
+        GalleryModule,
+        RouterModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
