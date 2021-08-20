@@ -1,4 +1,5 @@
-import { Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 interface NavItem {
   active?: boolean
@@ -18,43 +19,61 @@ export class NavMenuComponent implements OnInit {
   navMenuItem : string = this.navMenu + '__item'
   navMenuItemActive : string = this.navMenuItem + '_active'
 
-  @Input() navItem : NavItem[]
+  @Input() navItem : NavItem[] = [
+    {
+      content: 'Home',
+      href: 'home',
+      active: true
+    },
+    {
+      content: 'Blog',
+      href: 'blog'
+    },
+    {
+      content: 'Features',
+      href: 'features'
+    },
+    {
+      content: 'Pricing',
+      href: 'pricing'
+    },
+    {
+      content: 'Documentation',
+      href: 'documentation'
+    },
+  ]
+//**************************************************************************
+//   activeSection : number = 1;
+//
+//   constructor(
+//     private pageScrollService: PageScrollService,
+//     @Inject(DOCUMENT) private document: any
+//   ) { }
 
-  constructor() {
-    this.navItem = [
-      {
-        content: 'Home',
-        href: '#home',
-        active: true
-      },
-      {
-        content: 'Blog',
-        href: '#blog'
-      },
-      {
-        content: 'Features',
-        href: '#features'
-      },
-      {
-        content: 'Pricing',
-        href: '#pricing'
-      },
-      {
-        content: 'Documentation',
-        href: '#documentation'
-      },
-    ]
-  }
+  // fullPageScroll(e: string, i:number) {
+  //   this.pageScrollService.scroll({
+  //     scrollTarget: e,
+  //     document: this.document.querySelector(e)
+  //   });
+  //
+  //   this.activeSection = i;
+  // }
 
+//**************************************************************************
   scrollTo(fragment: string): void {
-        const targetElement = document.querySelector(fragment);
+        const targetElement = document.getElementById(fragment);
         if (fragment && targetElement) {
             console.log('going to'+fragment)
             targetElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
 
-        } else {
+        } else { //if home
             console.log('nothing todo')
-            window.scrollTo(0, 0);
+            // window.scrollTo(0, 0);
+            window.scroll({
+                   top: 0,
+                   left: 0,
+                   behavior: 'smooth'
+                  });
         }
     }
 

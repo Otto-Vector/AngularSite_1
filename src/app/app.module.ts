@@ -3,6 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
 
 import { SwiperModule } from "swiper/angular";
+// ********************** angular-modal-gallery *****************************
+import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
+import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save mousetrap`)
+import { GalleryModule } from '@ks89/angular-modal-gallery'; // <----------------- angular-modal-gallery library import
+import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-styled/swiper-local-styled.component';
+// **************************************************************************
+
+// ************************ optional font-awesome 5 ************************
+// to install use both `npm i --save @fortawesome/fontawesome-svg-core` and `npm i --save @fortawesome/free-solid-svg-icons`
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
+import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
+library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
+dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
+// *************************************************************************
 
 import { AppComponent } from './app.component';
 import { UiComponent } from './ui/ui.component';
@@ -33,25 +47,13 @@ import { FeaturesCardsComponent } from './ui/features/features-cards/features-ca
 import { BlogSwiperElementComponent } from './ui/blog/blog-swiper-element/blog-swiper-element.component';
 import { ViewImageButtonComponent } from './ui/blog/blog-swiper-element/view-image-button/view-image-button.component';
 import { QuoteCardSlideComponent } from './ui/quotes/quote-card-slide/quote-card-slide.component';
-
-// ********************** angular-modal-gallery *****************************
-import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
-import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save mousetrap`)
-import { GalleryModule } from '@ks89/angular-modal-gallery'; // <----------------- angular-modal-gallery library import
-// **************************************************************************
-
-// ************************ optional font-awesome 5 ************************
-// to install use both `npm i --save @fortawesome/fontawesome-svg-core` and `npm i --save @fortawesome/free-solid-svg-icons`
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-styled/swiper-local-styled.component';
 import { ExpansionPanelComponent } from './ui/faq/expansion-panel/expansion-panel.component';
 import { InputFieldEmailComponent } from './ui/newsletter/input-field-email/input-field-email.component';
 import { ButtonSaveMeComponent } from './ui/newsletter/button-save-me/button-save-me.component';
-import {RouterModule} from "@angular/router";
-library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
-dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
-// *************************************************************************
+import { AppRoutingModule } from './app-routing.module';
+import { AlwaysTopComponent } from './ui/always-top/always-top.component';
+
+
 
 @NgModule({
   declarations: [
@@ -88,15 +90,17 @@ dom.watch(); // Kicks off the process of finding <i> tags and replacing with <sv
     ExpansionPanelComponent,
     InputFieldEmailComponent,
     ButtonSaveMeComponent,
+    AlwaysTopComponent,
   ],
     imports: [
         BrowserModule,
         SwiperModule,
         CommonModule,
         GalleryModule,
-        RouterModule
+        // AppRoutingModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

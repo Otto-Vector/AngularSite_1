@@ -1,10 +1,12 @@
-<div [class]="header.main">
-  <div [class]="header.leftPanel">
-    <app-logo [class]="header.logo"></app-logo>
-    <app-nav-menu [class]="header.nav"></app-nav-menu>
-  </div>
-  <div [class]="header.rightPanel">
-    <app-socials [class]="header.socials"></app-socials>
-    <app-get-button [class]="header.getButton" [button]="btnGetStarted"></app-get-button>
+<div class="container">
+  <div [class]="header.main">
+    <div [class]="header.leftPanel">
+      <app-logo [class]="header.logo"></app-logo>
+      <app-nav-menu [class]="header.nav"></app-nav-menu>
+    </div>
+    <div [class]="header.rightPanel">
+      <app-socials [class]="header.socials"></app-socials>
+      <app-get-button [class]="header.getButton" [button]="btnGetStarted"></app-get-button>
+    </div>
   </div>
 </div>

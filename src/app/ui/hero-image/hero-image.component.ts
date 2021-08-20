@@ -1,17 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ViewButton} from "./view-button/view-button.component";
-import {SliderButton} from "./slider-button/slider-button.component";
 
 interface Classes {
   main: string
-  article : {
-    main : string
+  article: string
     label : string
     header : string
-    content : string
-  }
-    viewButton: string
-    sliders : string
+    text : string
+  viewButton: string
+  sliders : string
 }
 
 @Component({
@@ -24,12 +21,10 @@ export class HeroImageComponent implements OnInit {
   main_class : string = 'hero-image'
   heroImage : Classes = {
     main: this.main_class,
-    article: {
-      main: this.main_class + '__article',
+    article: this.main_class + '__article',
       label: this.main_class + '__label',
       header: this.main_class + '__header',
-      content: this.main_class + '__content'
-    },
+      text: this.main_class + '__text',
     viewButton: this.main_class + '__view-button',
     sliders: this.main_class + '__sliders'
   }
@@ -51,12 +46,5 @@ export class HeroImageComponent implements OnInit {
     s = 'from HeroImageComponent ' + (s??'')
     console.log(s)
   }
-  // modeSw(tit:string) {
-  //   for (let [i,{title}] of .getSliderArr.entries()) {
-  //     this.sliderArr[i].active = (title === tit)
-  //   }
-    // for (let [i,{title}] of this.sliderArr.entries()) {
-    //   this.sliderArr[i].active = (title === tit)
-    // }
-  // }
+
 }

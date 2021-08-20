@@ -1,11 +1,11 @@
-<article [class]="heroImage.main">
-  <article [class]="heroImage.article.main">
-    <app-label [class]="heroImage.article.label" [labelText]="textForLabel"></app-label>
-    <header [class]="heroImage.article.header">Increase your <b>productivity</b></header>
-    <p [class]="heroImage.article.content">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+<section [class]="heroImage.main">
+  <article [class]="heroImage.article">
+    <app-label [class]="heroImage.label" [labelText]="textForLabel"></app-label>
+    <header [class]="heroImage.header">Increase your <b>productivity</b></header>
+    <p [class]="heroImage.text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
   </article>
     <app-view-button [class]="heroImage.viewButton" [button]="btnView"></app-view-button>
 <!--  <div [class]="heroImage.sliders">-->
 <!--    <app-slider-button [slider]="sliderArr"></app-slider-button>-->
 <!--  </div>-->
-</article>
+</section>

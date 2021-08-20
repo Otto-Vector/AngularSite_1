@@ -1,4 +1,4 @@
-<div [class]="stats.main">
+<section [class]="stats.main">
   <div *ngFor="let item of cards"
     [class]="[
       stats.statsItem.main,
@@ -8,4 +8,4 @@
     <div [class]="stats.statistics">{{item.statistics}}</div>
     <div [class]="stats.description">{{item.description}}</div>
   </div>
-</div>
+</section>

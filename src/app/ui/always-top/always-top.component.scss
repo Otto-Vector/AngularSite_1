@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.always-top {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  background-color: $white-color;
+  border-bottom: solid 1px $borderTopColor;
+
+  min-width: $maxDesktopWidth;
+  //меняет размеры основного экрана контента
+  @media screen and (max-width: $desktopWidth) {
+    min-width: $smDesktopWidth;
+  }
+  @media screen and (max-width: $smDesktopWidth) {
+    min-width: $tableWidth;
+  }
+  @media screen and (max-width: $tableWidth) {
+    min-width: $phoneWidth;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    min-width: $smPhoneWidth;
+  }
+}

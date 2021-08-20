@@ -17,12 +17,18 @@
 }
 // ****************************************
 
+// для плавной прокрутки
+html {
+  scroll-behavior: smooth;
+}
 
 html { //уменьшение размера текста, в зависимости от ширины экрана
+
   line-height: $mainLineHeight;
   font-size: $mainFontSize;
   color: $mainFontColor;
   height: 100%;
+
   @media screen and (max-width: $maxDesktopWidth) {
 
     font-size: $mainFontSize;
