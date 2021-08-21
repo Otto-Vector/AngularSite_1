@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
+// import { AppRoutingModule } from './app-routing.module';
 
-import { SwiperModule } from "swiper/angular";
-// ********************** angular-modal-gallery *****************************
-import 'hammerjs'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save hammerjs`)
-import 'mousetrap'; // Mandatory for angular-modal-gallery 3.x.x or greater (`npm i --save mousetrap`)
-import { GalleryModule } from '@ks89/angular-modal-gallery'; // <----------------- angular-modal-gallery library import
+
+// скроллеры
+import {ScrollersModule} from "./engine/scrollers.module";
+
+// свайперы
+import {SwipersModule} from "./engine/swipers.module";
+// оболочка со стилями под свайпер
 import { SwiperLocalStyledComponent } from './ui/reusable-elements/swiper-local-styled/swiper-local-styled.component';
-// **************************************************************************
-
-// ************************ optional font-awesome 5 ************************
-// to install use both `npm i --save @fortawesome/fontawesome-svg-core` and `npm i --save @fortawesome/free-solid-svg-icons`
-import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faExternalLinkAlt, faPlus, faTimes, faDownload } from '@fortawesome/free-solid-svg-icons';
-library.add(faExternalLinkAlt, faPlus, faTimes, faDownload);
-dom.watch(); // Kicks off the process of finding <i> tags and replacing with <svg>
-// *************************************************************************
 
 import { AppComponent } from './app.component';
 import { UiComponent } from './ui/ui.component';
@@ -51,10 +45,6 @@ import { ExpansionPanelComponent } from './ui/faq/expansion-panel/expansion-pane
 import { InputFieldEmailComponent } from './ui/newsletter/input-field-email/input-field-email.component';
 import { ButtonSaveMeComponent } from './ui/newsletter/button-save-me/button-save-me.component';
 import { AlwaysTopComponent } from './ui/always-top/always-top.component';
-import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
-import {NgxScrollspyModule} from "@uniprank/ngx-scrollspy";
-// import { AppRoutingModule } from './app-routing.module';
-
 
 
 
@@ -96,13 +86,10 @@ import {NgxScrollspyModule} from "@uniprank/ngx-scrollspy";
     AlwaysTopComponent,
   ],
     imports: [
-        BrowserModule,
-        SwiperModule,
         CommonModule,
-        GalleryModule,
-        NgxPageScrollCoreModule.forRoot({ duration: 400 }),
-        NgxScrollspyModule.forRoot()
-        // AppRoutingModule,
+        BrowserModule,
+        SwipersModule,
+        ScrollersModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
