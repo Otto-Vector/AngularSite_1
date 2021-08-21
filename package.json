@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --build-optimizer --base-href /AngularSite_1/dist/SiteCreate1/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
