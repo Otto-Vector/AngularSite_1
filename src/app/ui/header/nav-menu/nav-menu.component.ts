@@ -1,4 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
+import {PageScrollService} from "ngx-page-scroll-core";
+import {DOCUMENT} from "@angular/common";
 
 
 interface NavItem {
@@ -6,7 +8,6 @@ interface NavItem {
   content: string
   href: string
 }
-
 
 @Component({
   selector: 'app-nav-menu',
@@ -42,41 +43,18 @@ export class NavMenuComponent implements OnInit {
       href: 'documentation'
     },
   ]
-//**************************************************************************
-//   activeSection : number = 1;
-//
-//   constructor(
-//     private pageScrollService: PageScrollService,
-//     @Inject(DOCUMENT) private document: any
-//   ) { }
 
-  // fullPageScroll(e: string, i:number) {
-  //   this.pageScrollService.scroll({
-  //     scrollTarget: e,
-  //     document: this.document.querySelector(e)
-  //   });
-  //
-  //   this.activeSection = i;
-  // }
+  constructor(
+    private pageScrollService: PageScrollService,
+    @Inject(DOCUMENT) private document: any
+  ) {}
 
-//**************************************************************************
-  scrollTo(fragment: string): void {
-        const targetElement = document.getElementById(fragment);
-        if (fragment && targetElement) {
-            console.log('going to'+fragment)
-            targetElement.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-
-        } else { //if home
-            console.log('nothing todo')
-            // window.scrollTo(0, 0);
-            window.scroll({
-                   top: 0,
-                   left: 0,
-                   behavior: 'smooth'
-                  });
-        }
-    }
-
+  public scrollTo(fragment: string): void {
+    this.pageScrollService.scroll({
+      document: this.document,
+      scrollTarget: '#'+fragment
+    });
+  }
 
   ngOnInit() {
   }

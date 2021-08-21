@@ -6,10 +6,10 @@ import { FaqComponent } from "./ui/faq/faq.component";
 
 const routes: Routes = [
   { path: 'home', redirectTo: '', pathMatch: 'full' },
-  { path: 'documentation', component: FaqComponent },
-  { path: 'blog', component: FaqComponent },
-  { path: 'features', component: FaqComponent },
-  { path: 'pricing', component: FaqComponent },
+  // { path: 'documentation', component: FaqComponent },
+  // { path: 'blog', component: FaqComponent },
+  // { path: 'features', component: FaqComponent },
+  // { path: 'pricing', component: FaqComponent },
 
 ];
 

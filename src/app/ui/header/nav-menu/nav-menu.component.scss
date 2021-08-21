@@ -16,6 +16,9 @@
     margin: 0 rem(21);
     transition: text-shadow 0.2s ease-in-out;
 
+    cursor: pointer;
+    user-select: none;
+
 
     @media screen and (max-width: $tableWidth) {
       margin: 0 rem(10);

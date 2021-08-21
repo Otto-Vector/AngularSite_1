@@ -50,8 +50,10 @@ import { QuoteCardSlideComponent } from './ui/quotes/quote-card-slide/quote-card
 import { ExpansionPanelComponent } from './ui/faq/expansion-panel/expansion-panel.component';
 import { InputFieldEmailComponent } from './ui/newsletter/input-field-email/input-field-email.component';
 import { ButtonSaveMeComponent } from './ui/newsletter/button-save-me/button-save-me.component';
-import { AppRoutingModule } from './app-routing.module';
 import { AlwaysTopComponent } from './ui/always-top/always-top.component';
+import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
+// import { AppRoutingModule } from './app-routing.module';
+
 
 
 
@@ -97,6 +99,7 @@ import { AlwaysTopComponent } from './ui/always-top/always-top.component';
         SwiperModule,
         CommonModule,
         GalleryModule,
+        NgxPageScrollCoreModule.forRoot({ duration: 400 })
         // AppRoutingModule,
     ],
   providers: [],
