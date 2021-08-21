@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ScrollSpyService} from "@uniprank/ngx-scrollspy";
 
-// import SwiperCore, {Pagination, Navigation, Autoplay, SwiperOptions} from "swiper/core";
-// SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 @Component({
   selector: 'app-ui',
@@ -9,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ui.component.scss']
 })
 export class UiComponent implements OnInit {
+  constructor(private _scrollSpyService: ScrollSpyService) {}
 
-  constructor() { }
+    ngOnInit() {
+        this._scrollSpyService.setOffset('window', 100);
+    }
 
-  ngOnInit(): void {
-  }
 
 }

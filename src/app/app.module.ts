@@ -52,6 +52,7 @@ import { InputFieldEmailComponent } from './ui/newsletter/input-field-email/inpu
 import { ButtonSaveMeComponent } from './ui/newsletter/button-save-me/button-save-me.component';
 import { AlwaysTopComponent } from './ui/always-top/always-top.component';
 import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
+import {NgxScrollspyModule} from "@uniprank/ngx-scrollspy";
 // import { AppRoutingModule } from './app-routing.module';
 
 
@@ -99,7 +100,8 @@ import {NgxPageScrollCoreModule} from "ngx-page-scroll-core";
         SwiperModule,
         CommonModule,
         GalleryModule,
-        NgxPageScrollCoreModule.forRoot({ duration: 400 })
+        NgxPageScrollCoreModule.forRoot({ duration: 400 }),
+        NgxScrollspyModule.forRoot()
         // AppRoutingModule,
     ],
   providers: [],

@@ -24,7 +24,6 @@ export class NavMenuComponent implements OnInit {
     {
       content: 'Home',
       href: 'home',
-      active: true
     },
     {
       content: 'Blog',

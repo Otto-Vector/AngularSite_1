@@ -1,6 +1,7 @@
 @import "src/styles/variables";
 @import "src/styles/mixins";
 
+
 .nav-menu {
   display: flex;
   flex-direction: row;
@@ -28,7 +29,7 @@
     }
 
     &:hover,
-    &_active {
+    &_active, &.active {
       //font-weight: 700;
       color: $navActFontColor;
       text-shadow: 0 0 .7px $navActFontColor,
