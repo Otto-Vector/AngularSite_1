@@ -50,7 +50,7 @@ export class QuotesComponent implements OnInit {
         pauseOnMouseEnter: true
       },
       breakpoints: {
-        1280: {
+        1300: {
             slidesPerView: 1.5,
           }
         }
