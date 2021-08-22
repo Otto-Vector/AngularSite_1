@@ -1,6 +1,10 @@
 # SiteCreate1
 
 You can see the [WORK SITE HERE](https://otto-vector.github.io/AngularSite_1/dist/SiteCreate1/)
+
+SOURCE FOR COMPARISON [HERE](https://www.figma.com/file/8T4byFDAV5REmnVyQlsFO1/clean_and_simple_website_freebie_work_file?node-id=0%3A1)
+from Figma Template
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server
