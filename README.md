@@ -1,5 +1,6 @@
 # SiteCreate1
 
+You can see the [WORK SITE HERE](https://otto-vector.github.io/AngularSite_1/dist/SiteCreate1/)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
 ## Development server
