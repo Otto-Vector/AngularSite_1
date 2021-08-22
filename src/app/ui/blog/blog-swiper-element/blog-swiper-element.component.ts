@@ -54,9 +54,9 @@ export class BlogSwiperElementComponent implements OnInit {
   }
 
   imagePath :[string,string,string] =[
-    '../../../../assets/images/blog/image1.jpg',
-    '../../../../assets/images/blog/image2.jpg',
-    '../../../../assets/images/blog/image3.jpg',
+    './assets/images/blog/image1.jpg',
+    './assets/images/blog/image2.jpg',
+    './assets/images/blog/image3.jpg',
   ]
   imageGradient : string[] = [
     'linear-gradient(13.46deg, rgba(255, 199, 53, 0.44) 1.89%, rgba(255, 227, 154, 0.93) 1.9%, rgba(255, 159, 90, 0) 68.24%)',

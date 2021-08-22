@@ -18,7 +18,7 @@ export class QuoteCardSlideComponent implements OnInit {
 
   @Input() quoteCardItem : QuoteCard = {
     text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
-    image: '../../../../assets/images/faces/face1.jpg'
+    image: './assets/images/faces/face1.jpg'
   }
 
   constructor() { }

@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --build-optimizer --base-href /AngularSite_1/dist/SiteCreate1/",
+    "build": "ng build",
+    "bld": "ng build --base-href /Angular/SiteCreate1/dist/SiteCreate1/",
+    "bldurl": "ng build --base-href /AngularSite_1/dist/SiteCreate1/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -41,12 +41,12 @@ export class StatsComponent implements OnInit {
 
   @Input() cards : StatsCard[] = [{
     left : true,
-    image : '../../../assets/images/stats/time.png',
+    image : './assets/images/stats/time.png',
     statistics : '89%',
     description : 'Customers who have increased their productivity'
   }, {
     left : false,
-    image : '../../../assets/images/stats/people.png',
+    image : './assets/images/stats/people.png',
     statistics : '3123',
     description : 'Users who have used our application'
   }

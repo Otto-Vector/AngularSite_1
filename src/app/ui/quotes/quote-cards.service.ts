@@ -16,7 +16,7 @@ export class QuoteCardsService {
   public quoteCards : QuoteCard[] = [
     {
       text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.',
-      image: '../../../../assets/images/faces/face3.jpg'
+      image: './assets/images/faces/face3.jpg'
     },
     {
       text: 'Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.'.trim(),

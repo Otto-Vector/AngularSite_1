@@ -34,13 +34,13 @@ export class ModalGalleryLocalService {
 
    galleryImages: Image[] = [
     new Image(0, {
-      img: '../../../../assets/images/blog/image1.jpg',
+      img: './assets/images/blog/image1.jpg',
     }),
     new Image(1, {
-      img: '../../../../assets/images/blog/image2.jpg',
+      img: './assets/images/blog/image2.jpg',
     }),
     new Image(2, {
-        img: '../../../../assets/images/blog/image3.jpg',
+        img: './assets/images/blog/image3.jpg',
     }),
     new Image(3, {
       img: this.randomOfficeImage(),
