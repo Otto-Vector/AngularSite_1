@@ -90,6 +90,7 @@ import { AlwaysTopComponent } from './ui/always-top/always-top.component';
         BrowserModule,
         SwipersModule,
         ScrollersModule,
+        // AppRoutingModule
     ],
   providers: [],
   bootstrap: [AppComponent]

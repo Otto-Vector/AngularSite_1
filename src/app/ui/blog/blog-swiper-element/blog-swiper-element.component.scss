@@ -130,7 +130,7 @@
     margin-right: rem(8);
   }
   &__right-button {
-    @media screen and (max-width: $phoneWidth) {
+    @media screen and (max-width: $tableWidth) {
       display: none;
     }
   }

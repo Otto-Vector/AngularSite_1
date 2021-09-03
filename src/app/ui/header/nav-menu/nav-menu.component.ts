@@ -1,7 +1,7 @@
 import {Component, Inject, Input, OnInit} from '@angular/core';
 import {PageScrollService} from "ngx-page-scroll-core";
 import {DOCUMENT} from "@angular/common";
-
+// import {RouterLink} from "@angular/router";
 
 interface NavItem {
   active?: boolean

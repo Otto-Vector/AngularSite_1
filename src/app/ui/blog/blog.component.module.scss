@@ -1,0 +1,35 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.blog {
+  background-color: $bgBlogColor;
+  border-top: solid 1px $borderTopColor;
+  //height: rem(865);
+  padding: rem(110) rem(143);
+  text-align: center;
+
+  @media screen and (max-width: $desktopWidth) {
+    padding: rem(110) rem(80);
+  }
+
+  @media screen and (max-width: $smDesktopWidth) {
+    padding: rem(110) rem(70);
+  }
+
+  @media screen and (max-width: $phoneWidth) {
+    padding: rem(110) rem(50);
+  }
+}
+  .label {
+    display: block;
+    margin-bottom: rem(20);
+  }
+
+  .header {
+    display: block;
+    margin-bottom: rem(92);
+  }
+
+  .swiperWrapper {
+    box-sizing: border-box;
+  }

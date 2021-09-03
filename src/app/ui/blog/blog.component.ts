@@ -7,6 +7,7 @@ import {ModalGalleryLocalService} from "./engine/modal-gallery-local.service";
 import {SwiperOptions} from "swiper";
 import {BlogSwiperElementService} from "./engine/blog-swiper-element.service";
 
+
 interface Classes {
   main: string
   label: string
@@ -22,6 +23,7 @@ interface Classes {
   // encapsulation: ViewEncapsulation.None
 })
 export class BlogComponent implements OnInit {
+
 
   readonly main_class: string = 'blog'
   readonly blog : Classes = {
