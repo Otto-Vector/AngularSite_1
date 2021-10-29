@@ -16,6 +16,7 @@ interface Classes {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
 
   main_class : string = 'header'

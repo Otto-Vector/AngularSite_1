@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ViewButton} from "./view-button/view-button.component";
 
+
 interface Classes {
   main: string
   article: string
@@ -31,20 +32,15 @@ export class HeroImageComponent implements OnInit {
 
   textForLabel : string = 'PLAN YOUR LIFE'
 
-  btnView : ViewButton = {action: () => {window.open('https://youtu.be/vDYP6AKw8bk', '_blank')}}
-  // sliderArr: SliderButton[] = [
-  //   {title: "first", active: true, action: this.informator},
-  //   {title: "second", action: this.informator},
-  //   {title: "3rd", action: this.informator}
-  // ]
-  constructor() { }
+  btnView : ViewButton = {action: () => {window.open('https://youtu.be/5qap5aO4i9A', '_blank')}}
+
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+
   }
 
-  informator(s:string|undefined):void {
-    s = 'from HeroImageComponent ' + (s??'')
-    console.log(s)
-  }
 
 }

@@ -1,5 +1,5 @@
 import {Component, Inject, Input, OnInit} from '@angular/core';
-import {PageScrollService} from "ngx-page-scroll-core";
+// import {PageScrollService} from "ngx-page-scroll-core";
 import {DOCUMENT} from "@angular/common";
 // import {RouterLink} from "@angular/router";
 
@@ -44,16 +44,16 @@ export class NavMenuComponent implements OnInit {
   ]
 
   constructor(
-    private pageScrollService: PageScrollService,
+    // private pageScrollService: PageScrollService,
     @Inject(DOCUMENT) private document: any
   ) {}
 
-  public scrollTo(fragment: string): void {
-    this.pageScrollService.scroll({
-      document: this.document,
-      scrollTarget: '#'+fragment
-    });
-  }
+  // public scrollTo(fragment: string): void {
+  //   this.pageScrollService.scroll({
+  //     document: this.document,
+  //     scrollTarget: '#'+fragment
+  //   });
+  // }
 
   ngOnInit() {
   }

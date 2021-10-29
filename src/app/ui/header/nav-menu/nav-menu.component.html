@@ -1,11 +1,11 @@
 <nav [class]="navMenu">
   <a *ngFor="let item of navItem"
         [href]="'#'+item.href"
-        (click)="scrollTo(item.href)"
         [uniScrollItem]="item.href"
         [class]="navMenuItem"
   >{{item.content}}</a>
 </nav>
 
+<!--        (click)="scrollTo(item.href)"-->
 <!--        [routerLink]="item.href"-->
 <!--        [routerLinkActive]="navMenuItemActive"-->
